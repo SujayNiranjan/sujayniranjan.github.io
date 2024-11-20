@@ -1,0 +1,22 @@
+/* custom.css */
+body {
+  background-color: #000000; /* Black background */
+  color: white; /* White text */
+}
+
+header, footer {
+  background-color: #000000; /* Black header/footer */
+}
+
+.site-title, .site-description, .social a {
+  color: white; /* Change text color for title, description, and social links */
+}
+
+.post {
+  background-color: #111111; /* Slightly lighter background for posts */
+}
+
+.btn-primary {
+  background-color: #333333; /* Dark button background */
+  color: white;
+}
