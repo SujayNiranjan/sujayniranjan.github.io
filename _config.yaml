@@ -13,6 +13,8 @@
 #     url: https://www.linkedin.com/in/niranjan-sujay/
 # theme: jekyll-theme-minimal
 # theme: jekyll-theme-minimal
+head:
+  - link: /assets/css/custom.css
 theme: jekyll-theme-minimal
 title: "Niranjan Sujay | Roboticist"
 logo: /Images/nyu pic.JPG
