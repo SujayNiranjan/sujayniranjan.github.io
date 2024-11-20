@@ -1,0 +1,21 @@
+body {
+  background-color: #000000; /* Set background to black */
+  color: white; /* Set text color to white for contrast */
+}
+
+header, footer {
+  background-color: #000000; /* Set header and footer background to black */
+}
+
+.site-title, .site-description, .social a {
+  color: white; /* Change text color for site title, description, and social links */
+}
+
+.post {
+  background-color: #111111; /* Slightly lighter background for posts */
+}
+
+.btn-primary {
+  background-color: #333333; /* Set primary button background to dark */
+  color: white;
+}
