@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Home
-permalink: /
 ---
 
 # Welcome to My Portfolio!
@@ -15,3 +14,7 @@ I'm Niranjan Sujay, a robotics researcher with a Master's in Mechatronics and Ro
 - Autonomous Navigation
 
 Feel free to explore my work in [Projects](projects.md/), learn more about my background in [About Me](about.md/), or get in touch through the [Contact](contact.md/) page.
+
+- [About Me](about.md)
+- [Experience](experience.md)
+- [Contact Me](contact.md)
