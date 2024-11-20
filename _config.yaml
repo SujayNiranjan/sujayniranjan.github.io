@@ -27,7 +27,7 @@ social:
     url: mailto:niranjan.sujay@nyu.edu
 show_downloads: false
 header_pages:
-  - _pages/index.md
+  - index.md
   - _pages/about.md
   - _pages/projects.md
   - _pages/experience.md
