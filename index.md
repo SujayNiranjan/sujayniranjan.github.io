@@ -1,11 +1,17 @@
-# Welcome to My Portfolio
+---
+layout: default
+title: Home
+permalink: /
+---
 
-![Profile Image](Images/nyu pic.JPG)
+# Welcome to My Portfolio!
 
-Hi, I'm **Niranjan Sujay**, a robotics researcher passionate about advancing robotic perception and 3D mapping. I am currently an intern at the **AI4CE Lab** at NYU, working under Dr. Chen Feng.
+I'm Niranjan Sujay, a robotics researcher with a Master's in Mechatronics and Robotics from New York University. I currently work as an intern at the AI4CE Lab, under Dr. Chen Feng, focusing on robotic perception, 3D mapping, and autonomous navigation systems.
 
-Explore my portfolio to learn about my research, projects, and technical skills.
+## Key Areas of Expertise:
+- Robotic Perception
+- 3D Mapping & SLAM
+- Sensor Fusion
+- Autonomous Navigation
 
-- 📄 [Download My Resume](Niranjan_Sujay.pdf)
-- 🌐 [LinkedIn](https://www.linkedin.com/in/niranjan-sujay/)
-- 💻 [GitHub](https://github.com/SujayNiranjan)
+Feel free to explore my work in [Projects](/projects/), learn more about my background in [About Me](/about/), or get in touch through the [Contact](/contact/) page.
