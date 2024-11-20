@@ -12,7 +12,9 @@
 #   - title: linkedin
 #     url: https://www.linkedin.com/in/niranjan-sujay/
 # theme: jekyll-theme-minimal
-theme: jekyll-theme-dark
+theme: jekyll-theme-minimal
+head:
+  - link: /assets/css/custom.css
 title: "Niranjan Sujay | Roboticist"
 logo: /Images/nyu pic.JPG
 description: "Advancing robotic perception and mapping for the future of autonomous systems."
