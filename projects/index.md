@@ -8,10 +8,10 @@ description: Overview of all projects.
 
 Explore the projects I've worked on:
 
-1. [MappingNYC](mappingnyc/index.html)  
+1. [MappingNYC](mappingnyc/index.md)  
    Multimodal urban mapping project using advanced SLAM techniques.
 
-2. [Curb2Door](curb2door/index.html)  
+2. [Curb2Door](curb2door/index.md)  
    Precise 3D reconstruction for urban delivery systems.
 
 3. [UrbanNav](urbannav/index.html)  
