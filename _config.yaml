@@ -28,9 +28,9 @@ social:
 show_downloads: false
 header_pages:
   - index.md
-  - about.md
+  - pages/about.md
   - projects.md
   - experience.md
-  - contact.md
+  - pages/contact.md
 
 
