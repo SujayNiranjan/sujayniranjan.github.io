@@ -12,7 +12,7 @@
 #   - title: linkedin
 #     url: https://www.linkedin.com/in/niranjan-sujay/
 # theme: jekyll-theme-minimal
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
 title: "Niranjan Sujay"
 logo: Images/nyu pic.JPG
 description: "Roboticist - Advancing robotic perception and mapping for the future of autonomous systems."
@@ -31,3 +31,25 @@ header_pages:
   - projects.md
   - experience.md
   - contact.md
+  
+# Build settings
+markdown: kramdown
+
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+  - '*.gemspec'
+  - 'README.md'
+  - 'node_modules'
+  - 'build'
+  - 'gulpfile.js'
+  - 'package.json'
+
+keep_files:
+  - 'CNAME'
+  - '.git'
+  - '.gitignore'
+
+plugins_dir:
+  - jekyll-minifier
+  - jekyll-sitemap
