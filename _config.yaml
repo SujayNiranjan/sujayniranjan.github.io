@@ -1,15 +1,33 @@
-name: Niranjan Sujay
-title: Niranjan Sujay | Roboticist
-logo: /Images/nyu pic.JPG
-description: I'm a robotics researcher with a Master's in Mechatronics and Robotics from NYU, currently interning at the AI4CE Lab under Dr. Chen Feng. My work focuses on robotic perception and 3D mapping, including projects like MappingNYC, which develops multimodal datasets for urban autonomous navigation. Beyond research, I enjoy mentoring students in robotics, sharing knowledge, and contributing to community STEM education initiatives.
+# title: Niranjan Sujay
+# logo: /Images/nyu pic.JPG
+# description: I'm a robotics researcher with a Master's in Mechatronics and Robotics from NYU, currently interning at the AI4CE Lab under Dr. Chen Feng. My work focuses on robotic perception and 3D mapping, including projects like MappingNYC, which develops multimodal datasets for urban autonomous navigation. Beyond research, I enjoy mentoring students in robotics, sharing knowledge, and contributing to community STEM education initiatives.
+# email: niranjan.sujay@nyu.edu
+# resume: Niranjan_Sujay.pdf
+# show_downloads: false
+# social:
+#   - title: email
+#     url: mailto:niranjan.sujay@nyu.edu
+#   - title: github
+#     url: https://github.com/SujayNiranjan
+#   - title: linkedin
+#     url: https://www.linkedin.com/in/niranjan-sujay/
+# theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal
+
+title: "Niranjan Sujay | Roboticist"
+description: "Advancing robotic perception and mapping for the future of autonomous systems."
 email: niranjan.sujay@nyu.edu
-resume: Niranjan_Sujay.pdf
-show_downloads: false
 social:
-  - title: email
-    url: mailto:niranjan.sujay@nyu.edu
-  - title: github
+  - title: GitHub
     url: https://github.com/SujayNiranjan
-  - title: linkedin
+  - title: LinkedIn
     url: https://www.linkedin.com/in/niranjan-sujay/
-theme: jekyll-theme-minimal
+  - title: Email
+    url: mailto:niranjan.sujay@nyu.edu
+show_downloads: false
+header_pages:
+  - index.md
+  - about.md
+  - projects.md
+  - experience.md
+  - contact.md
