@@ -14,4 +14,4 @@ I'm Niranjan Sujay, a robotics researcher with a Master's in Mechatronics and Ro
 - Sensor Fusion
 - Autonomous Navigation
 
-Feel free to explore my work in [Projects](/projects/), learn more about my background in [About Me](/about/), or get in touch through the [Contact](/contact/) page.
+Feel free to explore my work in [Projects](/projects.md/), learn more about my background in [About Me](/about.md/), or get in touch through the [Contact](/contact.md/) page.
