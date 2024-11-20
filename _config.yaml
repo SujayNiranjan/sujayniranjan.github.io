@@ -14,9 +14,9 @@
 # theme: jekyll-theme-minimal
 # theme: jekyll-theme-minimal
 theme: jekyll-theme-minimal
-title: "Niranjan Sujay"
+title: "Niranjan Sujay | Roboticist"
 logo: /Images/nyu pic.JPG
-description: "Roboticist - Advancing robotic perception and mapping for the future of autonomous systems."
+description: "Advancing robotic perception and mapping for the future of autonomous systems."
 email: niranjan.sujay@nyu.edu
 social:
   - title: GitHub
@@ -32,5 +32,3 @@ header_pages:
   - projects.md
   - experience.md
   - contact.md
-head:
-  - link: /assets/css/custom.css
