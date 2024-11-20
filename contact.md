@@ -1,3 +1,9 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
 # Contact Me
 
 I'm always eager to connect with fellow roboticists and enthusiasts. Feel free to reach out!
