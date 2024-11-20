@@ -1,10 +1,21 @@
+---
+layout: default
+title: About Me
+permalink: /about/
+---
+
 # About Me
 
-I'm a Master's student in **Mechatronics and Robotics** at **New York University**, graduating in May 2024. My work focuses on **robotic perception** and **3D mapping**, with projects aimed at enabling autonomous systems in urban environments.
+I am a robotics researcher currently interning at the AI4CE Lab at NYU, where I focus on advancing robotic perception and 3D mapping techniques. I completed my Master's in Mechatronics and Robotics from NYU and my Bachelor's in Robotics and Automation from Jain University.
 
-I aspire to pursue a **Ph.D. in robotics** and become a research scientist in robotic perception. My long-term goal is to establish an organization fostering collaboration and innovation in sustainable technological developments.
+## My Passion
 
-## Fun Facts
-- 🏆 Mentored high school robotics teams to national competition success.
-- 🥘 Passionate about cooking and experimenting with Indian-inspired vegetarian dishes.
-- 🎮 Avid gamer and football enthusiast.
+What motivates me is the potential to create intelligent machines that can think and interact in the world. The idea of developing robots that can adapt to their environments and collaborate with humans excites me every day.
+
+In addition to my research, I am passionate about mentoring students and contributing to STEM education, especially in robotics. I have mentored teams for national robotics competitions, helping them achieve great success.
+
+## Technical Skills:
+- Python, C, ROS, MATLAB
+- 3D Mapping & SLAM
+- Machine Learning
+- Computer Vision
