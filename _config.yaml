@@ -13,12 +13,10 @@
 #     url: https://www.linkedin.com/in/niranjan-sujay/
 # theme: jekyll-theme-minimal
 # theme: jekyll-theme-minimal
-head:
-  - link: /assets/css/custom.css
 theme: jekyll-theme-minimal
-title: "Niranjan Sujay | Roboticist"
+title: "Niranjan Sujay"
 logo: /Images/nyu pic.JPG
-description: "Advancing robotic perception and mapping for the future of autonomous systems."
+description: "Roboticist - Advancing robotic perception and mapping for the future of autonomous systems."
 email: niranjan.sujay@nyu.edu
 social:
   - title: GitHub
