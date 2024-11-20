@@ -1,0 +1,10 @@
+.social-links a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    color: #005bb5;
+}
