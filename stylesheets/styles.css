@@ -57,14 +57,16 @@ a:hover small {
 
 .wrapper {
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
-  justify-content: space-between;
+  padding: 0;
 }
 
 section {
   flex: 1;
   padding: 50px;
-  margin-left: 290px; /* Space for the fixed header */
+  margin-left: 300px; /* Space for the fixed header */
 }
 
 footer {
@@ -85,6 +87,20 @@ header {
   left: 0;
   bottom: 50px;
   padding: 10px 0;
+  background-color: #333; /* Background color for the header */
+  color: #e0e0e0;
+}
+
+header h1 {
+  font-size: 22px;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+header p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0 0 20px;
 }
 
 header ul {
