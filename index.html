@@ -10,18 +10,21 @@ description: Portfolio showcasing various robotics projects.
     <p>Explore my various robotics and AI projects below. Click on any project to learn more about it.</p>
   </div>
 
-  <!-- Tabs for project navigation -->
-  <div class="tabs">
-    <button class="tablinks" onclick="openProject(event, 'MappingNYC')">Mapping NYC</button>
-    <button class="tablinks" onclick="openProject(event, 'Curb2Door')">Curb2Door</button>
-    <button class="tablinks" onclick="openProject(event, 'DiffusionModels')">Diffusion Models</button>
-    <button class="tablinks" onclick="openProject(event, 'SwimmerBot')">SwimmerBot</button>
-    <button class="tablinks" onclick="openProject(event, 'UrbanNav')">UrbanNav</button>
-    <button class="tablinks" onclick="openProject(event, 'BipedRobot')">Biped Robot</button>
+  <!-- Navigation links to scroll to project sections -->
+  <div class="projects-list">
+    <ul>
+      <li><a href="#MappingNYC">Mapping NYC</a></li>
+      <li><a href="#Curb2Door">Curb2Door</a></li>
+      <li><a href="#DiffusionModels">Diffusion Models</a></li>
+      <li><a href="#SwimmerBot">SwimmerBot</a></li>
+      <li><a href="#UrbanNav">UrbanNav</a></li>
+      <li><a href="#BipedRobot">Biped Robot</a></li>
+    </ul>
   </div>
 
-  <!-- Content for each project -->
-  <div id="MappingNYC" class="tabcontent">
+  <!-- Project Content Sections (hidden by default, shown on anchor click) -->
+  
+  <section id="MappingNYC" class="project-section">
     <h2>Mapping NYC</h2>
     <p>MappingNYC is a project aimed at creating accurate 3D maps of New York City using a combination of LiDAR, cameras, and GPS. The goal is to optimize city planning and autonomous navigation systems.</p>
     <p><strong>Technologies Used:</strong> LiDAR, Visual Place Recognition, SLAM, GTSAM, AutoMerge</p>
@@ -33,9 +36,9 @@ description: Portfolio showcasing various robotics projects.
     </ul>
     <p><strong>Outcomes:</strong> The project successfully generated scalable 3D maps of NYC and enhanced the accuracy of urban navigation models.</p>
     <img src="mappingnyc-image1.jpg" alt="Mapping NYC in action">
-  </div>
+  </section>
 
-  <div id="Curb2Door" class="tabcontent">
+  <section id="Curb2Door" class="project-section">
     <h2>Curb2Door</h2>
     <p>Curb2Door involves creating detailed 3D maps for urban delivery systems, focusing on curbside and door-to-door routes. The project utilizes advanced sensor fusion techniques to reconstruct city environments and optimize delivery logistics.</p>
     <p><strong>Technologies Used:</strong> Livox LiDAR, Insta360 camera, u-blox GPS, 3D Gaussian Splatting, R3LIVE</p>
@@ -47,9 +50,9 @@ description: Portfolio showcasing various robotics projects.
     </ul>
     <p><strong>Outcomes:</strong> Generated highly accurate 3D models of urban areas for delivery optimization and improved mapping techniques for better route planning.</p>
     <img src="curb2door-image1.jpg" alt="Curb2Door system setup">
-  </div>
+  </section>
 
-  <div id="DiffusionModels" class="tabcontent">
+  <section id="DiffusionModels" class="project-section">
     <h2>Diffusion Models for Trajectory Prediction</h2>
     <p>This project focuses on predicting a person's future trajectory using diffusion models. By analyzing historical movement data, the system forecasts the likely paths that people will take in future frames.</p>
     <p><strong>Technologies Used:</strong> Diffusion Models, Python, TensorFlow, PyTorch</p>
@@ -60,9 +63,9 @@ description: Portfolio showcasing various robotics projects.
     </ul>
     <p><strong>Outcomes:</strong> Enhanced trajectory prediction models for use in autonomous vehicles and robotics, demonstrating successful predictions in real-world scenarios.</p>
     <img src="diffusion-image1.jpg" alt="Trajectory Prediction with Diffusion Models">
-  </div>
+  </section>
 
-  <div id="SwimmerBot" class="tabcontent">
+  <section id="SwimmerBot" class="project-section">
     <h2>SwimmerBot</h2>
     <p>SwimmerBot is a robot designed to autonomously track swimmers in a pool, following them while filming underwater. The project focuses on creating a robust tracking system using computer vision and sensor fusion.</p>
     <p><strong>Technologies Used:</strong> Custom-built robot, GPS, IMU, OpenCV, ROS</p>
@@ -74,9 +77,9 @@ description: Portfolio showcasing various robotics projects.
     </ul>
     <p><strong>Outcomes:</strong> A fully autonomous system capable of tracking and filming swimmers for training and analysis purposes.</p>
     <img src="swimmerbot-image1.jpg" alt="SwimmerBot tracking swimmers">
-  </div>
+  </section>
 
-  <div id="UrbanNav" class="tabcontent">
+  <section id="UrbanNav" class="project-section">
     <h2>UrbanNav</h2>
     <p>UrbanNav is a research project that focuses on enabling autonomous robots to navigate urban environments using a combination of sensors like LiDAR, cameras, and GPS. The project involves training navigation models using multimodal data collected by a robot dog.</p>
     <p><strong>Technologies Used:</strong> Unitree Go1 robot dog, Livox LiDAR, Insta360 camera, GPS, NoMaD, GNM, ViNT</p>
@@ -88,9 +91,9 @@ description: Portfolio showcasing various robotics projects.
     </ul>
     <p><strong>Outcomes:</strong> Contributed valuable multimodal datasets for training autonomous navigation models and demonstrated successful real-time navigation and obstacle avoidance.</p>
     <img src="urbannav-image1.jpg" alt="UrbanNav robot in action">
-  </div>
+  </section>
 
-  <div id="BipedRobot" class="tabcontent">
+  <section id="BipedRobot" class="project-section">
     <h2>Biped Robot Development</h2>
     <p>This project involved designing a biped robot with eight degrees of freedom, integrating motor control and sensory feedback to enhance movement and gait stability.</p>
     <p><strong>Technologies Used:</strong> Custom-built biped robot, IMU sensors, motors, MATLAB, ROS</p>
@@ -102,7 +105,7 @@ description: Portfolio showcasing various robotics projects.
     </ul>
     <p><strong>Outcomes:</strong> Successfully created a biped robot capable of walking with improved gait stability, contributing to the field of bipedal locomotion in robotics.</p>
     <img src="biped-image1.jpg" alt="Biped Robot development and testing">
-  </div>
+  </section>
 </div>
 
 <!-- Footer -->
@@ -110,61 +113,70 @@ description: Portfolio showcasing various robotics projects.
   <p>&copy; 2024 Niranjan Sujay | All rights reserved.</p>
 </footer>
 
-<script>
-  function openProject(evt, projectName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(projectName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
-
-  // Default display project
-  document.getElementsByClassName("tablinks")[0].click();
-</script>
-
 <style>
-  .tabcontent {
-    display: none;
+  body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+  }
+
+  .projects-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .projects-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .projects-list li {
+    margin: 10px 0;
+  }
+
+  .projects-list a {
+    color: #64FFDA;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .projects-list a:hover {
+    color: #1DB954;
+  }
+
+  .project-section {
+    background-color: #222;
     padding: 20px;
-    background-color: #1a1a1a;
-    color: white;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
   }
 
-  .tabs {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 20px;
-  }
-
-  .tablinks {
-    background-color: #333;
-    color: white;
-    padding: 14px 20px;
-    cursor: pointer;
-    border: none;
-    font-size: 16px;
-  }
-
-  .tablinks:hover {
-    background-color: #555;
-  }
-
-  .tablinks.active {
-    background-color: #444;
+  .project-section h2 {
+    color: #64FFDA;
   }
 
   footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #111;
     color: white;
   }
 </style>
+
+<script>
+  // Simple scroll functionality when clicking on the project links
+  document.querySelectorAll('.projects-list a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
