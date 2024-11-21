@@ -1,7 +1,7 @@
 html, body {
   background-color: #1c1c1c; /* Darker shade between black and gray */
   margin: 0;
-  padding: 50px;
+  padding: 0; /* Removed extra padding for consistent centering */
   font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #e0e0e0; /* Light gray text color for contrast */
   font-weight: 400;
@@ -57,14 +57,18 @@ a:hover small {
 
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center; /* Horizontally centers items */
+  justify-content: center; /* Vertically centers items */
+  min-height: 100vh; /* Full viewport height */
+  text-align: center; /* Centers text */
 }
 
 section {
   flex: 1;
   padding: 50px;
-  margin-left: 290px; /* Space for the fixed header */
+  margin: 0 auto; /* Centers the section horizontally */
+  text-align: center; /* Centers content inside */
 }
 
 footer {
@@ -79,22 +83,21 @@ footer {
 header {
   display: flex;
   flex-direction: column;
-  width: 270px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 50px;
+  width: 100%; /* Full-width header for better centering */
+  position: static; /* Removed fixed positioning */
   padding: 10px 0;
+  text-align: center; /* Center navigation items */
 }
 
 header ul {
   display: flex;
   flex-direction: column;
+  align-items: center; /* Align nav items to the center */
   padding: 0;
   background: #333333;
   border-radius: 5px;
   border: 1px solid #444444;
-  width: 270px;
+  width: auto; /* Allow dynamic width */
 }
 
 header li {
