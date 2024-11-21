@@ -1,34 +1,46 @@
----
-layout: default
-title: MappingNYC
-description: Multimodal Mapping for Autonomous Urban Navigation
----
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MappingNYC</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>MappingNYC</h1>
+            <p><strong>Project Overview</strong></p>
+            <p>MappingNYC is a multimodal urban mapping project aimed at enhancing the capabilities of autonomous vehicles in dense urban areas like New York City.</p>
 
-# MappingNYC
+            <p><strong>Technologies Used</strong></p>
+            <ul>
+                <li><strong>Hardware</strong>: Dual LiDARs, Dual 360-degree cameras, GPS</li>
+                <li><strong>Software</strong>: ROS, Fast-LIO, GTSAM, Visual Place Recognition, SLAM techniques like PIN-SLAM, Scan Context</li>
+            </ul>
 
-## **Project Overview**
-MappingNYC is a multimodal urban mapping project aimed at enhancing the capabilities of autonomous vehicles in dense urban areas like New York City. 
+            <p><strong>Key Contributions</strong></p>
+            <ol>
+                <li>Developed a robust sensor mount for collecting multimodal data in urban environments.</li>
+                <li>Implemented <strong>Fast-LIO</strong> for real-time odometry and <strong>Visual Place Recognition</strong> for loop closure.</li>
+                <li>Created scalable maps using <strong>graph-based optimization</strong> with <strong>GTSAM</strong>.</li>
+                <li>Ensured session merging across mapping routes using <strong>AutoMerge</strong>.</li>
+            </ol>
 
-## **Technologies Used**
-- **Hardware**: Dual LiDARs, Dual 360-degree cameras, GPS.
-- **Software**: ROS, Fast-LIO, GTSAM, Visual Place Recognition, SLAM techniques like PIN-SLAM, Scan Context.
+            <p><strong>Outcomes</strong></p>
+            <ul>
+                <li>High-resolution maps of NYC, supporting the research community.</li>
+                <li>A comprehensive dataset available for training and testing autonomous navigation systems.</li>
+            </ul>
 
-## **Key Contributions**
-1. Developed a robust sensor mount for collecting multimodal data in urban environments.
-2. Implemented **Fast-LIO** for real-time odometry and **Visual Place Recognition** for loop closure.
-3. Created scalable maps using **graph-based optimization** with **GTSAM**.
-4. Ensured session merging across mapping routes using **AutoMerge**.
-
-## **Outcomes**
-The project has resulted in:
-- High-resolution maps of NYC, supporting the research community.
-- A comprehensive dataset available for training and testing autonomous navigation systems.
-
-## **Media**
-![MappingNYC Sample Map](mappingnyc-image1.jpg)  
-*Figure: Example of a multimodal map generated for NYC.*
-
-![MappingNYC Sensor Mount](mappingnyc-image2.jpg)  
-*Figure: Sensor mount prototype.*
-
-[Return to Projects](../../)
+            <p><strong>Media</strong></p>
+            <img src="mappingnyc-image1.jpg" alt="MappingNYC Sample Map" style="width: 100%; max-width: 600px;"/>
+            <p><em>Figure: Example of a multimodal map generated for NYC.</em></p>
+            <img src="mappingnyc-image2.jpg" alt="MappingNYC Sensor Mount" style="width: 100%; max-width: 600px;"/>
+            <p><em>Figure: Sensor mount prototype.</em></p>
+            
+            <p><a href="../../">Return to Projects</a></p>
+        </header>
+    </div>
+</body>
+</html>
