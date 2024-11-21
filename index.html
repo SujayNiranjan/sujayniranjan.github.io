@@ -1,97 +1,91 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Minimal by Steve Smith</title>
+<!DOCTYPE html>
+<html lang="en">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
     <div class="wrapper">
-      <header>
-        <h1>Niranjan Sujay</h1>
-        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
-        <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 50%; margin-top: 20px;">
-        <p class="view"><a href="insert your GitHub link here">View the Project on GitHub <small>insert your GitHub username here</small></a></p>
-        <ul>
-          <li><a href="insert the ZIP file link here">Download <strong>ZIP File</strong></a></li>
-          <li><a href="insert the TAR ball link here">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="insert your GitHub link here">Fork On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>Research & Projects</h1>
 
-        <p><em>View the <a href="insert your project link here">source of this content</a>.</em></p>
+        <!-- Header Section -->
+        <header>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
 
-        <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
+        <!-- Main Content -->
+        <main>
+            <!-- About Section -->
+            <section id="about">
+                <h1>About Me</h1>
+                <p>Hello! I'm Niranjan Sujay, a robotics enthusiast and researcher specializing in robotic perception, AI, and autonomous systems. I am passionate about integrating AI with robotics to create innovative solutions.</p>
+                <p>Currently, I am a PhD student and a Robotic Research Intern, working on various research projects such as UrbanNav and Curb2Door. My goal is to contribute to the development of autonomous systems that can navigate complex environments with precision.</p>
+            </section>
 
-        <p>Some of my notable projects include:</p>
-        <ul>
-          <li class="project">
-            <a href="javascript:void(0);" class="project-title">UrbanNav - Autonomous navigation using a Unitree Go1 robot dog equipped with various sensors.</a>
-            <div class="project-details">
-              <p>Details about the UrbanNav project...</p>
+            <!-- Projects Section -->
+            <section id="projects">
+                <h1>Projects</h1>
+
+                <div class="project">
+                    <div class="project-title" onclick="toggleProjectDetails('urbanNavDetails')">UrbanNav Project</div>
+                    <div class="project-details" id="urbanNavDetails">
+                        <p>This project uses the Unitree Go1 robot dog with Insta360 camera, Livox LiDAR, and GPS for navigation. The goal is to improve autonomous navigation through training models based on collected data.</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title" onclick="toggleProjectDetails('curb2doorDetails')">Curb2Door Project</div>
+                    <div class="project-details" id="curb2doorDetails">
+                        <p>Utilizing a mount with Livox, Insta360 camera, and u-blox GPS, this project focuses on reconstructing 3D point clouds for urban mapping and navigation purposes.</p>
+                    </div>
+                </div>
+
+                <!-- Additional Projects can be added here -->
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact">
+                <h1>Contact</h1>
+                <p>If you'd like to reach out, feel free to connect with me:</p>
+                <ul>
+                    <li><a href="mailto:niranjan.sujay@example.com">niranjan.sujay@example.com</a></li>
+                    <li><a href="https://www.linkedin.com/in/niranjansujay">LinkedIn</a></li>
+                    <li><a href="https://github.com/niranjansujay">GitHub</a></li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Niranjan Sujay. All rights reserved.</p>
+            <div class="socials">
+                <a href="https://twitter.com/niranjansujay">Twitter</a>
+                <a href="https://linkedin.com/in/niranjansujay">LinkedIn</a>
             </div>
-          </li>
-          <li class="project">
-            <a href="javascript:void(0);" class="project-title">SwimmerBot - A robotic swimmer tracker for precise athlete tracking and video recording in aquatic environments.</a>
-            <div class="project-details">
-              <p>Details about the SwimmerBot project...</p>
-            </div>
-          </li>
-          <li class="project">
-            <a href="javascript:void(0);" class="project-title">MappingNYC - A project involving advanced LiDAR and GPS systems for detailed urban mapping.</a>
-            <div class="project-details">
-              <p>Details about the MappingNYC project...</p>
-            </div>
-          </li>
-        </ul>
+        </footer>
 
-        <h2>Publications & Collaborations</h2>
-        <p>In addition to my research, I am collaborating with researchers and industry professionals on various projects that aim to solve real-world problems in autonomous systems.</p>
-
-        <h2>Math and Code</h2>
-        <p>For those interested in the underlying math and algorithms, my projects rely heavily on sensor fusion, SLAM techniques, and optimization methods. Here's an example of one of my algorithms:</p>
-
-        <pre><code>def robot_navigation_algorithm
-  # Your code here
-end</code></pre>
-
-        <h2>Educational Contributions</h2>
-        <p>I have also contributed to the education and mentoring of students, particularly in the field of robotics. This includes teaching, advising students in competitions, and providing guidance on technical projects.</p>
-
-        <h2>Collaborators & Funding</h2>
-        <p>I have collaborated with researchers from various institutions, including NYU Tandon, and I am currently involved in several funded projects.</p>
-
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
-        
-        <!-- Social Media Links -->
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
-          <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
-          <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
-          <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
-        </div>
-      </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     <script>
-      const projectTitles = document.querySelectorAll('.project-title');
-      projectTitles.forEach(title => {
-        title.addEventListener('click', function () {
-          const details = this.nextElementSibling;
-          details.classList.toggle('active');
-        });
-      });
+        function toggleProjectDetails(projectId) {
+            var details = document.getElementById(projectId);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
     </script>
-  </body>
+
+</body>
+
 </html>
