@@ -8,42 +8,6 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width">
-    <style>
-      /* Additional styles for accordion */
-      .accordion {
-        background-color: #333333;
-        color: #e0e0e0;
-        cursor: pointer;
-        padding: 10px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 18px;
-        transition: 0.4s;
-        border-radius: 5px;
-        margin-top: 10px;
-      }
-
-      .active, .accordion:hover {
-        background-color: #4e90ff;
-        color: #fff;
-      }
-
-      .panel {
-        padding: 10px;
-        background-color: #444444;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        border-radius: 5px;
-      }
-
-      .panel p {
-        color: #e0e0e0;
-        margin: 0;
-      }
-    </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -69,21 +33,11 @@
         <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
 
         <p>Some of my notable projects include:</p>
-
-        <button class="accordion">UrbanNav</button>
-        <div class="panel">
-          <p>UrbanNav is a project aimed at autonomous navigation using a Unitree Go1 robot dog equipped with various sensors, including LiDAR and cameras. The goal is to develop robust navigation models that allow the robot to autonomously traverse complex urban environments, adjusting to real-time changes in its surroundings. The project integrates advanced SLAM techniques, computer vision, and machine learning for real-time decision-making and path planning.</p>
-        </div>
-
-        <button class="accordion">SwimmerBot</button>
-        <div class="panel">
-          <p>SwimmerBot is a cutting-edge robotic swimmer tracker designed to precisely track athletes in aquatic environments, ensuring high accuracy for video recording and performance analysis. The system uses a combination of computer vision, sensor fusion, and trajectory prediction algorithms to follow athletes as they swim. This allows for detailed feedback on technique and performance in real-time, offering athletes and coaches valuable insights.</p>
-        </div>
-
-        <button class="accordion">MappingNYC</button>
-        <div class="panel">
-          <p>MappingNYC is an ambitious project that involves creating detailed, high-resolution maps of urban environments using advanced LiDAR and GPS systems. The aim is to capture intricate details of the city’s infrastructure, enabling applications in autonomous navigation, city planning, and environmental monitoring. The project leverages state-of-the-art sensor fusion techniques to integrate data from multiple sensors and produce accurate, up-to-date 3D models of New York City.</p>
-        </div>
+        <ul>
+          <li><a href="urbanNav.html">UrbanNav</a> - Autonomous navigation using a Unitree Go1 robot dog equipped with various sensors.</li>
+          <li><a href="swimmerBot.html">SwimmerBot</a> - A robotic swimmer tracker for precise athlete tracking and video recording in aquatic environments.</li>
+          <li><a href="mappingNYC.html">MappingNYC</a> - A project involving advanced LiDAR and GPS systems for detailed urban mapping.</li>
+        </ul>
 
         <h2>Publications & Collaborations</h2>
         <p>In addition to my research, I am collaborating with researchers and industry professionals on various projects that aim to solve real-world problems in autonomous systems.</p>
@@ -114,20 +68,6 @@ end</code></pre>
         </div>
       </footer>
     </div>
-    <script>
-      // Accordion functionality
-      var acc = document.getElementsByClassName("accordion");
-      for (var i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
+    <script src="javascripts/scale.fix.js"></script>
   </body>
 </html>
