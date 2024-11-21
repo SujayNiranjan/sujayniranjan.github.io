@@ -1,151 +1,274 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Niranjan Sujay's Portfolio</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niranjan Sujay | Robotics Researcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: left;
+            padding-left: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .intro {
+            margin-top: 20px;
+        }
+        .intro h2 {
+            font-size: 28px;
+            color: #333;
+        }
+        .intro p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .projects, .contact {
+            margin-top: 40px;
+        }
+        .projects h2, .contact h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .projects ul, .contact ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .projects li, .contact li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1 style="text-align: center;">Niranjan Sujay</h1>
-        <p style="text-align: center;">Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
-        <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;">
-        <p class="view" style="text-align: center;"><a href="insert your GitHub link here">View the Project on GitHub <small>insert your GitHub username here</small></a></p>
-        <ul style="list-style-type: none; text-align: center;">
-          <li style="display: inline-block; margin-right: 10px;"><a href="insert the ZIP file link here">Download <strong>ZIP File</strong></a></li>
-          <li style="display: inline-block; margin-right: 10px;"><a href="insert the TAR ball link here">Download <strong>TAR Ball</strong></a></li>
-          <li style="display: inline-block; margin-right: 10px;"><a href="insert your GitHub link here">Fork On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
+<header>
+    <h1>Niranjan Sujay</h1>
+    <p>Robotics Researcher | AI & Perception Specialist | Innovator</p>
+</header>
 
-      <!-- Horizontal Navigation Bar -->
-      <nav>
-        <ul style="list-style-type: none; text-align: center;">
-          <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="projects.html">Projects</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="publications.html">Publications</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="experiences.html">Experience</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-
-      <section>
-        <h1 style="text-align: center;">GitHub Flavored Markdown</h1>
-
-        <p style="text-align: center;"><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>
-
-        <p>Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:</p>
-
-        <p style="text-align: center;">Roses are red<br>
-        Violets are blue</p>
-
-        <p>The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:</p>
-
-        <p style="text-align: center;">Roses are red<br><br>
-        Violets are blue</p>
-
-        <p>Oh, and one thing I cannot stand is the mangling of words with multiple underscores in them like perform_complicated_task or do_this_and_do_that_and_another_thing.</p>
-
-        <h2 style="text-align: center;">A bit of the GitHub spice</h2>
-
-        <p style="text-align: center;">In addition to the changes in the previous section, certain references are auto-linked:</p>
-
-        <ul style="list-style-type: none; text-align: center;">
-          <li>SHA: be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2</li>
-          <li>User@SHA ref: <a href="https://github.com/mojombo/product/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo@<tt>be6a8cc</tt></a></li>
-          <li>User/Project@SHA: <a href="https://github.com/mojombo/god/commit/be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2" class="commit-link">mojombo/god@<tt>be6a8cc</tt></a></li>
-          <li>#Num: <a href="https://github.com/github/product/issues/1" class="issue-link" title="Baseline: What is up in the air right now?">#1</a></li>
-          <li>User/#Num: mojombo#1</li>
-          <li>User/Project#Num: <a href="https://github.com/mojombo/god/issues/1" class="issue-link" title="The server is not available (or you do not have permissions to access it)">mojombo/god#1</a></li>
-        </ul>
-
-        <p style="text-align: center;">These are dangerous goodies though, and we need to make sure email addresses don't get mangled:</p>
-
-        <p style="text-align: center;">My email addy is <a href="mailto:tom@github.com">tom@github.com</a>.</p>
-
-        <h2 style="text-align: center;">Math is hard, let's go shopping</h2>
-
-        <p style="text-align: center;">In first grade I learned that 5 &gt; 3 and 2 &lt; 7. Maybe some arrows. 1 -&gt; 2 -&gt; 3. 9 &lt;- 8 &lt;- 7.</p>
-
-        <p style="text-align: center;">Triangles man! a^2 + b^2 = c^2</p>
-
-        <h2 style="text-align: center;">We all like making lists</h2>
-
-        <p>The above header should be an H2 tag. Now, for a list of fruits:</p>
-
-        <ul style="list-style-type: none; text-align: center;">
-          <li>Red Apples</li>
-          <li>Purple Grapes</li>
-          <li>Green Kiwifruits</li>
-        </ul>
-
-        <p>Let's get crazy:</p>
-
-        <ol style="text-align: center;">
-          <li>
-            <p>This is a list item with two paragraphs. Lorem ipsum dolor<br>
-            sit amet, consectetuer adipiscing elit. Aliquam hendrerit<br>
-            mi posuere lectus.</p>
-
-            <p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet<br>
-            vitae, risus. Donec sit amet nisl. Aliquam semper ipsum<br>
-            sit amet velit.</p>
-          </li>
-          <li><p>Suspendisse id sem consectetuer libero luctus adipiscing.</p></li>
-        </ol>
-
-        <p>What about some code <strong>in</strong> a list? That's insane, right?</p>
-
-        <ol style="text-align: center;">
-          <li>
-            <p>In Ruby you can map like this:</p>
-
-            <pre><code>['a', 'b'].map { |x| x.uppercase }</code></pre>
-          </li>
-          <li>
-            <p>In Rails, you can do a shortcut:</p>
-
-            <pre><code>['a', 'b'].map(&amp;:uppercase)</code></pre>
-          </li>
-        </ol>
-
-        <p>Some people seem to like definition lists</p>
-
-        <dl style="text-align: center;">
-          <dt>Lower cost</dt>
-          <dd>The new version of this product costs significantly less than the previous one!</dd>
-          <dt>Easier to use</dt>
-          <dd>We've changed the product so that it's much easier to use!</dd>
-        </dl>
-
-        <h2 style="text-align: center;">I am a robot</h2>
-
-        <p style="text-align: center;">Maybe you want to print <code>robot</code> to the console 1000 times. Why not?</p>
-
-        <pre><code>def robot_invasion
-  puts("robot " * 1000)
-end
-</code></pre>
-
-        <p style="text-align: center;">You see, that was formatted as code because it's been indented by four spaces.</p>
-
-        <p style="text-align: center;">How about we throw some angle braces and ampersands in there?</p>
-
-        <pre><code>&lt;div class="footer"&gt;
-    &amp;copy; 2024 Niranjan Sujay
-&lt;/div&gt;</code></pre>
-
-        <h2 style="text-align: center;">The End</h2>
-
-      </section>
+<div class="container">
+    <div class="profile">
+        <img src="profile.jpg" alt="Niranjan Sujay" class="profile-img">
     </div>
-  </body>
+
+    <div class="intro">
+        <h2>About Me</h2>
+        <p>Hello! I'm Niranjan Sujay, a Robotics Researcher specializing in AI and Perception. I work on innovative solutions for autonomous systems, perception, and robotics research. I am passionate about exploring the intersections of robotics, machine learning, and real-world applications.</p>
+    </div>
+
+    <div class="projects">
+        <h2>Explore My Projects</h2>
+        <ul>
+            <li><a href="#">SwimmerBot: Autonomous Robot for Swimmer Tracking</a></li>
+            <li><a href="#">UrbanNav: Navigation Models for Autonomous Robots</a></li>
+            <li><a href="#">Curb2Door: 3D Mapping and Environmental Reconstruction</a></li>
+            <li><a href="#">MappingNYC: Precise City Mapping using LiDAR & GPS</a></li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <h2>Contact Me</h2>
+        <ul>
+            <li>Email: niranjan.sujay@example.com</li>
+            <li>Phone: +1234567890</li>
+            <li>LinkedIn: <a href="#">linkedin.com/in/niranjansujay</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>Connect with me:</p>
+    <div class="social-icons">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niranjan Sujay | Robotics Researcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: left;
+            padding-left: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        header p {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+        .intro {
+            margin-top: 20px;
+        }
+        .intro h2 {
+            font-size: 28px;
+            color: #333;
+        }
+        .intro p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .projects, .contact {
+            margin-top: 40px;
+        }
+        .projects h2, .contact h2 {
+            font-size: 24px;
+            color: #333;
+        }
+        .projects ul, .contact ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+        .projects li, .contact li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: left;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Niranjan Sujay</h1>
+    <p>Robotics Researcher | AI & Perception Specialist | Innovator</p>
+</header>
+
+<div class="container">
+    <div class="profile">
+        <img src="profile.jpg" alt="Niranjan Sujay" class="profile-img">
+    </div>
+
+    <div class="intro">
+        <h2>About Me</h2>
+        <p>Hello! I'm Niranjan Sujay, a Robotics Researcher specializing in AI and Perception. I work on innovative solutions for autonomous systems, perception, and robotics research. I am passionate about exploring the intersections of robotics, machine learning, and real-world applications.</p>
+    </div>
+
+    <div class="projects">
+        <h2>Explore My Projects</h2>
+        <ul>
+            <li><a href="#">SwimmerBot: Autonomous Robot for Swimmer Tracking</a></li>
+            <li><a href="#">UrbanNav: Navigation Models for Autonomous Robots</a></li>
+            <li><a href="#">Curb2Door: 3D Mapping and Environmental Reconstruction</a></li>
+            <li><a href="#">MappingNYC: Precise City Mapping using LiDAR & GPS</a></li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <h2>Contact Me</h2>
+        <ul>
+            <li>Email: niranjan.sujay@example.com</li>
+            <li>Phone: +1234567890</li>
+            <li>LinkedIn: <a href="#">linkedin.com/in/niranjansujay</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>Connect with me:</p>
+    <div class="social-icons">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+
+</body>
 </html>
