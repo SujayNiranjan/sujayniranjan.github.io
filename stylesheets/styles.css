@@ -122,7 +122,7 @@ header ul {
 }
 
 header li {
-  width: 89px;
+  width: 90px;
   float: left;
   border-right: 1px solid #444;
   height: 40px;
@@ -132,19 +132,23 @@ header li:first-child a {
   border-radius: 5px 0 0 5px;
 }
 
-header li:last-child a {
-  border-radius: 0 5px 5px 0;
+header ul li:last-child {
+  border-right: none;
+  width: 90px; /* Match width to other list items */
 }
 
 header ul a {
   line-height: 1;
   font-size: 11px;
-  color: #aaa; /* Slightly muted text */
-  display: block;
+  color: #aaa;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Centers text horizontally */
+  align-items: center; /* Centers text vertically */
+  height: 100%; /* Matches parent height */
+  padding: 0 5px; /* Adds spacing for text */
   text-align: center;
-  padding-top: 6px;
-  height: 34px;
 }
+
 
 header ul a:hover {
   color: #ddd;
