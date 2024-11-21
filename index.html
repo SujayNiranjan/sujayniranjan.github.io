@@ -1,182 +1,73 @@
----
-layout: default
-title: Projects Overview
-description: Portfolio showcasing various robotics projects.
----
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Minimal by Steve Smith</title>
 
-<div class="container">
-  <div class="projects-header">
-    <h1>My Robotics Projects</h1>
-    <p>Explore my various robotics and AI projects below. Click on any project to learn more about it.</p>
-  </div>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Niranjan Sujay</h1>
+        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
+        <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 50%; margin-top: 20px;">
+        <p class="view"><a href="insert your GitHub link here">View the Project on GitHub <small>insert your GitHub username here</small></a></p>
+        <ul>
+          <li><a href="insert the ZIP file link here">Download <strong>ZIP File</strong></a></li>
+          <li><a href="insert the TAR ball link here">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="insert your GitHub link here">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Research & Projects</h1>
 
-  <!-- Navigation links to scroll to project sections -->
-  <div class="projects-list">
-    <ul>
-      <li><a href="#MappingNYC">Mapping NYC</a></li>
-      <li><a href="#Curb2Door">Curb2Door</a></li>
-      <li><a href="#DiffusionModels">Diffusion Models</a></li>
-      <li><a href="#SwimmerBot">SwimmerBot</a></li>
-      <li><a href="#UrbanNav">UrbanNav</a></li>
-      <li><a href="#BipedRobot">Biped Robot</a></li>
-    </ul>
-  </div>
+        <p><em>View the <a href="insert your project link here">source of this content</a>.</em></p>
 
-  <!-- Project Content Sections (hidden by default, shown on anchor click) -->
-  
-  <section id="MappingNYC" class="project-section">
-    <h2>Mapping NYC</h2>
-    <p>MappingNYC is a project aimed at creating accurate 3D maps of New York City using a combination of LiDAR, cameras, and GPS. The goal is to optimize city planning and autonomous navigation systems.</p>
-    <p><strong>Technologies Used:</strong> LiDAR, Visual Place Recognition, SLAM, GTSAM, AutoMerge</p>
-    <p><strong>Contributions:</strong></p>
-    <ul>
-      <li>Developed sensor fusion techniques to merge data from LiDAR, cameras, and GPS.</li>
-      <li>Implemented Fast-LIO for precise odometry calculations.</li>
-      <li>Optimized the use of loop closure techniques to ensure accurate mapping.</li>
-    </ul>
-    <p><strong>Outcomes:</strong> The project successfully generated scalable 3D maps of NYC and enhanced the accuracy of urban navigation models.</p>
-    <img src="mappingnyc-image1.jpg" alt="Mapping NYC in action">
-  </section>
+        <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
 
-  <section id="Curb2Door" class="project-section">
-    <h2>Curb2Door</h2>
-    <p>Curb2Door involves creating detailed 3D maps for urban delivery systems, focusing on curbside and door-to-door routes. The project utilizes advanced sensor fusion techniques to reconstruct city environments and optimize delivery logistics.</p>
-    <p><strong>Technologies Used:</strong> Livox LiDAR, Insta360 camera, u-blox GPS, 3D Gaussian Splatting, R3LIVE</p>
-    <p><strong>Contributions:</strong></p>
-    <ul>
-      <li>Developed a mount system integrating LiDAR and cameras for efficient data capture.</li>
-      <li>Implemented 3D Gaussian Splatting for efficient point cloud reconstruction.</li>
-      <li>Used R3LIVE for real-time 3D reconstruction.</li>
-    </ul>
-    <p><strong>Outcomes:</strong> Generated highly accurate 3D models of urban areas for delivery optimization and improved mapping techniques for better route planning.</p>
-    <img src="curb2door-image1.jpg" alt="Curb2Door system setup">
-  </section>
+        <p>Some of my notable projects include:</p>
+        <ul>
+          <li>UrbanNav - Autonomous navigation using a Unitree Go1 robot dog equipped with various sensors.</li>
+          <li>SwimmerBot - A robotic swimmer tracker for precise athlete tracking and video recording in aquatic environments.</li>
+          <li>MappingNYC - A project involving advanced LiDAR and GPS systems for detailed urban mapping.</li>
+        </ul>
 
-  <section id="DiffusionModels" class="project-section">
-    <h2>Diffusion Models for Trajectory Prediction</h2>
-    <p>This project focuses on predicting a person's future trajectory using diffusion models. By analyzing historical movement data, the system forecasts the likely paths that people will take in future frames.</p>
-    <p><strong>Technologies Used:</strong> Diffusion Models, Python, TensorFlow, PyTorch</p>
-    <p><strong>Contributions:</strong></p>
-    <ul>
-      <li>Developed and trained a diffusion model to predict trajectories based on past movements.</li>
-      <li>Implemented state-of-the-art machine learning techniques to improve prediction accuracy.</li>
-    </ul>
-    <p><strong>Outcomes:</strong> Enhanced trajectory prediction models for use in autonomous vehicles and robotics, demonstrating successful predictions in real-world scenarios.</p>
-    <img src="diffusion-image1.jpg" alt="Trajectory Prediction with Diffusion Models">
-  </section>
+        <h2>Publications & Collaborations</h2>
+        <p>In addition to my research, I am collaborating with researchers and industry professionals on various projects that aim to solve real-world problems in autonomous systems.</p>
 
-  <section id="SwimmerBot" class="project-section">
-    <h2>SwimmerBot</h2>
-    <p>SwimmerBot is a robot designed to autonomously track swimmers in a pool, following them while filming underwater. The project focuses on creating a robust tracking system using computer vision and sensor fusion.</p>
-    <p><strong>Technologies Used:</strong> Custom-built robot, GPS, IMU, OpenCV, ROS</p>
-    <p><strong>Contributions:</strong></p>
-    <ul>
-      <li>Developed an autonomous tracking system to follow swimmers across the pool.</li>
-      <li>Integrated sensors (GPS, IMU) for accurate positioning and movement tracking.</li>
-      <li>Implemented computer vision algorithms to ensure accurate tracking of swimmers.</li>
-    </ul>
-    <p><strong>Outcomes:</strong> A fully autonomous system capable of tracking and filming swimmers for training and analysis purposes.</p>
-    <img src="swimmerbot-image1.jpg" alt="SwimmerBot tracking swimmers">
-  </section>
+        <h2>Math and Code</h2>
+        <p>For those interested in the underlying math and algorithms, my projects rely heavily on sensor fusion, SLAM techniques, and optimization methods. Here's an example of one of my algorithms:</p>
 
-  <section id="UrbanNav" class="project-section">
-    <h2>UrbanNav</h2>
-    <p>UrbanNav is a research project that focuses on enabling autonomous robots to navigate urban environments using a combination of sensors like LiDAR, cameras, and GPS. The project involves training navigation models using multimodal data collected by a robot dog.</p>
-    <p><strong>Technologies Used:</strong> Unitree Go1 robot dog, Livox LiDAR, Insta360 camera, GPS, NoMaD, GNM, ViNT</p>
-    <p><strong>Contributions:</strong></p>
-    <ul>
-      <li>Collected multimodal data (images, point clouds, GPS coordinates) for autonomous navigation tasks.</li>
-      <li>Developed models such as NoMaD and GNM for goal-conditioned navigation.</li>
-      <li>Implemented ViNT (Vision-based Transformer) to enhance navigation tasks using visual data.</li>
-    </ul>
-    <p><strong>Outcomes:</strong> Contributed valuable multimodal datasets for training autonomous navigation models and demonstrated successful real-time navigation and obstacle avoidance.</p>
-    <img src="urbannav-image1.jpg" alt="UrbanNav robot in action">
-  </section>
+        <pre><code>def robot_navigation_algorithm
+  # Your code here
+end</code></pre>
 
-  <section id="BipedRobot" class="project-section">
-    <h2>Biped Robot Development</h2>
-    <p>This project involved designing a biped robot with eight degrees of freedom, integrating motor control and sensory feedback to enhance movement and gait stability.</p>
-    <p><strong>Technologies Used:</strong> Custom-built biped robot, IMU sensors, motors, MATLAB, ROS</p>
-    <p><strong>Contributions:</strong></p>
-    <ul>
-      <li>Designed and built a biped robot capable of walking and maintaining balance.</li>
-      <li>Integrated sensory feedback using IMU sensors to optimize movement.</li>
-      <li>Developed control algorithms for smooth and stable gait.</li>
-    </ul>
-    <p><strong>Outcomes:</strong> Successfully created a biped robot capable of walking with improved gait stability, contributing to the field of bipedal locomotion in robotics.</p>
-    <img src="biped-image1.jpg" alt="Biped Robot development and testing">
-  </section>
-</div>
+        <h2>Educational Contributions</h2>
+        <p>I have also contributed to the education and mentoring of students, particularly in the field of robotics. This includes teaching, advising students in competitions, and providing guidance on technical projects.</p>
 
-<!-- Footer -->
-<footer>
-  <p>&copy; 2024 Niranjan Sujay | All rights reserved.</p>
-</footer>
+        <h2>Collaborators & Funding</h2>
+        <p>I have collaborated with researchers from various institutions, including NYU Tandon, and I am currently involved in several funded projects.</p>
 
-<style>
-  body {
-    background-color: #111;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-
-  .container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 40px;
-  }
-
-  .projects-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .projects-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .projects-list li {
-    margin: 10px 0;
-  }
-
-  .projects-list a {
-    color: #64FFDA;
-    text-decoration: none;
-    font-size: 18px;
-  }
-
-  .projects-list a:hover {
-    color: #1DB954;
-  }
-
-  .project-section {
-    background-color: #222;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-  }
-
-  .project-section h2 {
-    color: #64FFDA;
-  }
-
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    color: white;
-  }
-</style>
-
-<script>
-  // Simple scroll functionality when clicking on the project links
-  document.querySelectorAll('.projects-list a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
+        
+        <!-- Social Media Links -->
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
+          <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
+          <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
+          <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
+        </div>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+</html>
