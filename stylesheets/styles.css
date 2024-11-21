@@ -104,22 +104,39 @@ img {
   max-width: 100%;
 }
 
+/* Add some margin or padding to the header and nav to prevent overlap */
 header {
   width: 270px;
   float: left;
   position: fixed;
+  top: 50px; /* Adjusted top position to give more space */
   -webkit-font-smoothing: subpixel-antialiased;
+  padding: 10px;
+  z-index: 10; /* Ensure header is above other elements */
 }
 
+nav {
+  text-align: center;
+  margin-top: 90px; /* Increased margin-top to create more space */
+}
+
+/* Add more space to the top of the home button */
+nav a {
+  padding: 10px 20px; /* Increase the padding to make the button more clickable */
+}
+
+/* Adjusting the position of the list items within the navigation */
 header ul {
-  list-style: none;
-  height: 40px;
+  list-style-type: none;
+  text-align: center;
+  margin-top: 10px; /* Adds space between the text and the nav bar */
   padding: 0;
-  background: #2e2e2e; /* Darker background for header */
+  background: #2e2e2e;
   border-radius: 5px;
   border: 1px solid #444;
   width: 270px;
 }
+
 
 header li {
   width: 90px;
