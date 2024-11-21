@@ -1,91 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Minimal by Steve Smith</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width">
+    <style>
+      /* Additional styles for accordion */
+      .accordion {
+        background-color: #333333;
+        color: #e0e0e0;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        transition: 0.4s;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
 
-<body>
+      .active, .accordion:hover {
+        background-color: #4e90ff;
+        color: #fff;
+      }
 
+      .panel {
+        padding: 10px;
+        background-color: #444444;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        border-radius: 5px;
+      }
+
+      .panel p {
+        color: #e0e0e0;
+        margin: 0;
+      }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
     <div class="wrapper">
+      <header>
+        <h1>Niranjan Sujay</h1>
+        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
+        <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 50%; margin-top: 20px;">
+        <p class="view"><a href="insert your GitHub link here">View the Project on GitHub <small>insert your GitHub username here</small></a></p>
+        <ul>
+          <li><a href="insert the ZIP file link here">Download <strong>ZIP File</strong></a></li>
+          <li><a href="insert the TAR ball link here">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="insert your GitHub link here">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Research & Projects</h1>
 
-        <!-- Header Section -->
-        <header>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </header>
+        <p><em>View the <a href="insert your project link here">source of this content</a>.</em></p>
 
-        <!-- Main Content -->
-        <main>
-            <!-- About Section -->
-            <section id="about">
-                <h1>About Me</h1>
-                <p>Hello! I'm Niranjan Sujay, a robotics enthusiast and researcher specializing in robotic perception, AI, and autonomous systems. I am passionate about integrating AI with robotics to create innovative solutions.</p>
-                <p>Currently, I am a PhD student and a Robotic Research Intern, working on various research projects such as UrbanNav and Curb2Door. My goal is to contribute to the development of autonomous systems that can navigate complex environments with precision.</p>
-            </section>
+        <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
 
-            <!-- Projects Section -->
-            <section id="projects">
-                <h1>Projects</h1>
+        <p>Some of my notable projects include:</p>
 
-                <div class="project">
-                    <div class="project-title" onclick="toggleProjectDetails('urbanNavDetails')">UrbanNav Project</div>
-                    <div class="project-details" id="urbanNavDetails">
-                        <p>This project uses the Unitree Go1 robot dog with Insta360 camera, Livox LiDAR, and GPS for navigation. The goal is to improve autonomous navigation through training models based on collected data.</p>
-                    </div>
-                </div>
+        <button class="accordion">UrbanNav</button>
+        <div class="panel">
+          <p>UrbanNav is a project aimed at autonomous navigation using a Unitree Go1 robot dog equipped with various sensors, including LiDAR and cameras. The goal is to develop robust navigation models that allow the robot to autonomously traverse complex urban environments, adjusting to real-time changes in its surroundings. The project integrates advanced SLAM techniques, computer vision, and machine learning for real-time decision-making and path planning.</p>
+        </div>
 
-                <div class="project">
-                    <div class="project-title" onclick="toggleProjectDetails('curb2doorDetails')">Curb2Door Project</div>
-                    <div class="project-details" id="curb2doorDetails">
-                        <p>Utilizing a mount with Livox, Insta360 camera, and u-blox GPS, this project focuses on reconstructing 3D point clouds for urban mapping and navigation purposes.</p>
-                    </div>
-                </div>
+        <button class="accordion">SwimmerBot</button>
+        <div class="panel">
+          <p>SwimmerBot is a cutting-edge robotic swimmer tracker designed to precisely track athletes in aquatic environments, ensuring high accuracy for video recording and performance analysis. The system uses a combination of computer vision, sensor fusion, and trajectory prediction algorithms to follow athletes as they swim. This allows for detailed feedback on technique and performance in real-time, offering athletes and coaches valuable insights.</p>
+        </div>
 
-                <!-- Additional Projects can be added here -->
-            </section>
+        <button class="accordion">MappingNYC</button>
+        <div class="panel">
+          <p>MappingNYC is an ambitious project that involves creating detailed, high-resolution maps of urban environments using advanced LiDAR and GPS systems. The aim is to capture intricate details of the city’s infrastructure, enabling applications in autonomous navigation, city planning, and environmental monitoring. The project leverages state-of-the-art sensor fusion techniques to integrate data from multiple sensors and produce accurate, up-to-date 3D models of New York City.</p>
+        </div>
 
-            <!-- Contact Section -->
-            <section id="contact">
-                <h1>Contact</h1>
-                <p>If you'd like to reach out, feel free to connect with me:</p>
-                <ul>
-                    <li><a href="mailto:niranjan.sujay@example.com">niranjan.sujay@example.com</a></li>
-                    <li><a href="https://www.linkedin.com/in/niranjansujay">LinkedIn</a></li>
-                    <li><a href="https://github.com/niranjansujay">GitHub</a></li>
-                </ul>
-            </section>
-        </main>
+        <h2>Publications & Collaborations</h2>
+        <p>In addition to my research, I am collaborating with researchers and industry professionals on various projects that aim to solve real-world problems in autonomous systems.</p>
 
-        <!-- Footer Section -->
-        <footer>
-            <p>&copy; 2024 Niranjan Sujay. All rights reserved.</p>
-            <div class="socials">
-                <a href="https://twitter.com/niranjansujay">Twitter</a>
-                <a href="https://linkedin.com/in/niranjansujay">LinkedIn</a>
-            </div>
-        </footer>
+        <h2>Math and Code</h2>
+        <p>For those interested in the underlying math and algorithms, my projects rely heavily on sensor fusion, SLAM techniques, and optimization methods. Here's an example of one of my algorithms:</p>
 
+        <pre><code>def robot_navigation_algorithm
+  # Your code here
+end</code></pre>
+
+        <h2>Educational Contributions</h2>
+        <p>I have also contributed to the education and mentoring of students, particularly in the field of robotics. This includes teaching, advising students in competitions, and providing guidance on technical projects.</p>
+
+        <h2>Collaborators & Funding</h2>
+        <p>I have collaborated with researchers from various institutions, including NYU Tandon, and I am currently involved in several funded projects.</p>
+
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
+        
+        <!-- Social Media Links -->
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
+          <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
+          <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
+          <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
+        </div>
+      </footer>
     </div>
-
     <script>
-        function toggleProjectDetails(projectId) {
-            var details = document.getElementById(projectId);
-            if (details.style.display === "none" || details.style.display === "") {
-                details.style.display = "block";
-            } else {
-                details.style.display = "none";
-            }
-        }
+      // Accordion functionality
+      var acc = document.getElementsByClassName("accordion");
+      for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
