@@ -34,9 +34,24 @@
 
         <p>Some of my notable projects include:</p>
         <ul>
-          <li>UrbanNav - Autonomous navigation using a Unitree Go1 robot dog equipped with various sensors.</li>
-          <li>SwimmerBot - A robotic swimmer tracker for precise athlete tracking and video recording in aquatic environments.</li>
-          <li>MappingNYC - A project involving advanced LiDAR and GPS systems for detailed urban mapping.</li>
+          <li class="project">
+            <a href="javascript:void(0);" class="project-title">UrbanNav - Autonomous navigation using a Unitree Go1 robot dog equipped with various sensors.</a>
+            <div class="project-details">
+              <p>Details about the UrbanNav project...</p>
+            </div>
+          </li>
+          <li class="project">
+            <a href="javascript:void(0);" class="project-title">SwimmerBot - A robotic swimmer tracker for precise athlete tracking and video recording in aquatic environments.</a>
+            <div class="project-details">
+              <p>Details about the SwimmerBot project...</p>
+            </div>
+          </li>
+          <li class="project">
+            <a href="javascript:void(0);" class="project-title">MappingNYC - A project involving advanced LiDAR and GPS systems for detailed urban mapping.</a>
+            <div class="project-details">
+              <p>Details about the MappingNYC project...</p>
+            </div>
+          </li>
         </ul>
 
         <h2>Publications & Collaborations</h2>
@@ -69,5 +84,14 @@ end</code></pre>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
+    <script>
+      const projectTitles = document.querySelectorAll('.project-title');
+      projectTitles.forEach(title => {
+        title.addEventListener('click', function () {
+          const details = this.nextElementSibling;
+          details.classList.toggle('active');
+        });
+      });
+    </script>
   </body>
 </html>
