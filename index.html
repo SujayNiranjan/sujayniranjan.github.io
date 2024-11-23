@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Niranjan Sujay - Portfolio</title>
   <style>
-    /* Add your CSS styles here */
+    /* Reverting to your original theme */
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #1a1a1a;
-      color: white;
-      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background-color: #121212; /* Dark background */
+      color: white; /* White text */
     }
 
     /* Glowing Mouse Effect */
@@ -21,7 +21,7 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background-color: rgba(255, 167, 25, 0.5);
+      background-color: rgba(255, 167, 25, 0.5); /* Soft glowing effect */
       pointer-events: none;
       transform: translate(-50%, -50%);
       transition: all 0.1s ease;
@@ -39,21 +39,22 @@
       transition: all 0.1s ease;
     }
 
-    /* Header Styles */
+    /* Header Section */
     header {
       text-align: center;
-      margin-top: 50px;
-    }
-
-    header img {
-      border-radius: 80%;
-      width: 150px;
-      height: auto;
       margin-top: 30px;
     }
 
     header h1 {
       font-size: 3em;
+      margin: 0;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+      border-radius: 80%;
+      margin-top: 30px;
     }
 
     header p {
@@ -61,11 +62,15 @@
       color: lightgray;
     }
 
-    /* Navigation Bar Styles */
-    nav ul {
-      list-style-type: none;
+    /* Navigation Bar */
+    nav {
       text-align: center;
       margin-top: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: inline-block;
     }
 
     nav ul li {
@@ -74,8 +79,8 @@
     }
 
     nav ul li a {
-      text-decoration: none;
       color: white;
+      text-decoration: none;
       font-size: 1.1em;
     }
 
@@ -83,33 +88,40 @@
       color: orange;
     }
 
-    /* Main Content Styles */
+    /* Main Content */
     section {
       padding: 20px;
+      margin-top: 30px;
     }
 
     section h1 {
       font-size: 2.5em;
     }
 
+    section ul {
+      padding-left: 20px;
+    }
+
     section ul li {
       margin: 10px 0;
     }
 
-    /* Footer Styles */
     footer {
       text-align: center;
       margin-top: 50px;
     }
 
-    footer .socials a {
+    footer a {
       color: lightgray;
-      margin: 0 10px;
       text-decoration: none;
     }
 
-    footer .socials a:hover {
+    footer a:hover {
       color: orange;
+    }
+
+    .socials a {
+      margin: 0 10px;
     }
   </style>
 </head>
@@ -122,7 +134,7 @@
   <div class="wrapper">
     <header>
       <h1>Niranjan Sujay</h1>
-      <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
+      <img src="Images/nyu pic.JPG" alt="Niranjan Sujay">
       <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
       <p class="view">
         <a href="https://github.com/YourGitHubUsername">View the Project on GitHub <small>Your GitHub Username</small></a>
