@@ -6,22 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Niranjan Sujay - Portfolio</title>
   <style>
-    /* Reverting to your original theme */
+    /* Base Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #121212; /* Dark background */
-      color: white; /* White text */
+      background-color: #121212;
+      color: white;
+      overflow: hidden; /* Hide overflow to keep the page neat */
     }
 
-    /* Glowing Mouse Effect */
+    /* Glowing Cursor */
     #MouseGlow {
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
-      background-color: rgba(255, 167, 25, 0.5); /* Soft glowing effect */
+      background-color: rgba(255, 167, 25, 0.8); /* Bright glowing color */
       pointer-events: none;
       transform: translate(-50%, -50%);
       transition: all 0.1s ease;
@@ -29,17 +30,17 @@
 
     #MouseGlowBlur {
       position: absolute;
-      width: 120px;
-      height: 120px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background-color: rgba(255, 167, 25, 0.25);
+      background-color: rgba(255, 167, 25, 0.2); /* Soft glow */
       pointer-events: none;
       transform: translate(-50%, -50%);
       backdrop-filter: blur(10px);
       transition: all 0.1s ease;
     }
 
-    /* Header Section */
+    /* Header Styling */
     header {
       text-align: center;
       margin-top: 30px;
@@ -127,7 +128,7 @@
 </head>
 <body>
 
-  <!-- Add Glow Divs -->
+  <!-- Glowing Cursor Divs -->
   <div id="MouseGlow"></div>
   <div id="MouseGlowBlur"></div>
 
