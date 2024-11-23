@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Projects - Niranjan Sujay</title>
+    <title>Work Experience - Niranjan Sujay</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <meta name="viewport" content="width=device-width">
@@ -11,7 +11,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Projects</h1>
+        <h1>Work Experience</h1>
         <nav style="text-align: center; margin-top: 20px;">
           <ul style="list-style-type: none; display: inline-block;">
             <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
@@ -22,21 +22,36 @@
       </header>
 
       <section>
-        <h2>Project Overview</h2>
-        <p>Below are the projects I am currently working on. Click on the project names to explore more details:</p>
-
+        <h2>Robotic Research Intern</h2>
+        <p><strong>AI4CE Lab, NYU Tandon</strong> | <em>May 2024 - Present</em></p>
         <ul>
-          <li><a href="projects/urbannav/index.html">UrbanNav</a> - A cutting-edge autonomous navigation system using a Unitree Go1 robot dog.</li>
-          <li><a href="projects/swimmerbot/index.html">SwimmerBot</a> - A robotic swimmer tracker designed for athletic training and video documentation.</li>
-          <li><a href="projects/mappingnyc/index.html">MappingNYC</a> - An advanced urban mapping project utilizing LiDAR and GPS systems.</li>
-          <li><a href="projects/curb2door/index.html">Curb2Door</a> - A project focusing on reconstructing environments for efficient localization using LiDAR, camera, and GPS data.</li>
-          <li><a href="projects/diffusion-models/index.html">Diffusion Models</a> - Research on utilizing diffusion models for motion prediction and forecasting in robotic systems.</li>
-          <li><a href="projects/biped-robot/index.html">Biped Robot</a> - Development of a biped robot focusing on dynamic stability and walking algorithms.</li>
+          <li><strong>UrbanNav Project:</strong> Deployed a sensor-equipped Unitree Go1 robotdog with Livox LiDAR, u-blox GPS, and Insta360 camera, capturing over 120 hours of RGB, LiDAR, and GPS data. Training agents on thousands of hours of in-the-wild city walking and driving videos sourced from the web. Improved real-world navigation accuracy by 77.3%—a 20% increase over previous methods (ViNT, NoMaD). Achieved top metrics in right-turn and crossing scenarios (Arrival 87.8%, AOE 4.63°).</li>
+          <li><strong>MappingNYC Project:</strong> Designed a custom hardware mount with dual-LiDAR, dual 360 cameras, and GPS, collecting 160+ hours of data for high-precision NYC mapping. Processed 2–3 TB of data per collection round, overcoming Fast-LIO limitations by segmenting rosbags for manageable waypoint processing. Employed interactive SLAM, enhancing loop closure accuracy and environmental fidelity. Enabled detailed reconstruction for a digital twin of NYC, supporting real-time urban navigation applications.</li>
+          <li><strong>Curb2Door Project:</strong> Created a handheld sensor mount for 3D point cloud and image data collection in smaller urban environments. Combined 3D Gaussian Splatting and R3LIVE to produce high-detail 3D models of uneven terrains, improving autonomous navigation accuracy on varied surfaces by up to 30%. Overcame issues with shadow cast and environment transitions by implementing waypoint-specific scene generation, ensuring robust scene reconstruction in dynamic settings.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Robotic Research Intern</h2>
+        <p><strong>Green Quest Solutions Private Limited, Singapore</strong> | <em>Sep 2021 - Aug 2022</em></p>
+        <ul>
+          <li><strong>Custom YOLO Model for Waste Detection:</strong> Developed a YOLO-based model for precise waste categorization, integrating Intel RealSense for depth measurement. Achieved an 85-96% improvement in waste dimension detection and sorting accuracy by refining depth perception algorithms. Streamlined object sorting through optimized file handling, reducing processing delays.</li>
+          <li><strong>Custom Circuit Design:</strong> Engineered custom circuits integrating multiple sensors and a power distribution board, optimizing power management. Reduced power discharge rates and recharge time by 15%, extending system runtime by approximately 50%, enabling efficient, extended fieldwork without frequent power interruptions.</li>
+          <li><strong>Flexible Robotic Arm for Tree Health Monitoring:</strong> Built a sensor-equipped robotic arm to measure tree health metrics across a million trees, reducing assessment time from two years to six months. Integrated precise control and real-time data collection, significantly enhancing operational efficiency in forestry applications.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Robotic Intern</h2>
+        <p><strong>Flux Auto, Bengaluru, India</strong> | <em>Dec 2019 - Feb 2020</em></p>
+        <ul>
+          <li><strong>Real-Time Object Recognition and Sensor Integration:</strong> Designed and implemented real-time object recognition on an NVidia Jetson Nano developer board, achieving a 60% improvement in detection accuracy for autonomous vehicle applications. Integrated 15 cameras and 4 echolocation sensors, achieving reliable obstacle detection and accurate traffic sign recognition. Successfully calibrated multi-height sensor mounts, ensuring smooth and safe autonomous operation across varied urban environments.</li>
+          <li><strong>Motion Planning and Decision-Making for AVs:</strong> Contributed to the design of motion planning algorithms, focusing on predictable, safe, and smooth vehicle behavior. Addressed complex urban navigation challenges by refining decision-making protocols, improving overall autonomous navigation performance.</li>
         </ul>
       </section>
       
       <footer>
-        <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
+        <p>This experience page is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
       </footer>
     </div>
   </body>
