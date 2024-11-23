@@ -1,28 +1,28 @@
 <!doctype html>
 <html lang="en">
   <head>
-    #MouseGlow, #MouseGlowBlur {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  transition: all 0.1s ease;
-}
-
-#MouseGlow {
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-}
-
-#MouseGlowBlur {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
-}
+      #MouseGlow, #MouseGlowBlur {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      z-index: 9999;
+      transition: all 0.1s ease;
+    }
+    
+    #MouseGlow {
+      width: 20px;
+      height: 20px;
+      background: rgba(255, 255, 255, 0.6);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    
+    #MouseGlowBlur {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+    }
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -91,20 +91,20 @@
     </div>
     <script src="javascripts/scale.fix.js"></script>
   const mouseGlow = document.createElement("div");
-mouseGlow.id = "MouseGlow";
-document.body.appendChild(mouseGlow);
-
-const mouseGlowBlur = document.createElement("div");
-mouseGlowBlur.id = "MouseGlowBlur";
-document.body.appendChild(mouseGlowBlur);
-
-document.addEventListener("mousemove", (e) => {
-  const { clientX: x, clientY: y } = e;
-  mouseGlow.style.left = `${x}px`;
-  mouseGlow.style.top = `${y}px`;
-  mouseGlowBlur.style.left = `${x}px`;
-  mouseGlowBlur.style.top = `${y}px`;
-});
+    mouseGlow.id = "MouseGlow";
+    document.body.appendChild(mouseGlow);
+    
+    const mouseGlowBlur = document.createElement("div");
+    mouseGlowBlur.id = "MouseGlowBlur";
+    document.body.appendChild(mouseGlowBlur);
+    
+    document.addEventListener("mousemove", (e) => {
+      const { clientX: x, clientY: y } = e;
+      mouseGlow.style.left = `${x}px`;
+      mouseGlow.style.top = `${y}px`;
+      mouseGlowBlur.style.left = `${x}px`;
+      mouseGlowBlur.style.top = `${y}px`;
+    });
 
   </body>
 </html>
