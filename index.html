@@ -1,207 +1,188 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Niranjan Sujay's Portfolio</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Niranjan Sujay - Portfolio</title>
+  <style>
+    /* Add your CSS styles here */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+      overflow: hidden;
+    }
 
-    <!-- Glowing Cursor and Other Styles -->
-    <style>
-      body {
-        margin: 0;
-        height: 100%;
-        overflow: hidden;
-        font-family: Arial, sans-serif;
-        cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"><circle cx="10" cy="10" r="8" fill="none" stroke="cyan" stroke-width="2"/><circle cx="10" cy="10" r="4" fill="cyan" /></svg>') 10 10, auto;
-      }
+    /* Glowing Mouse Effect */
+    #MouseGlow {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255, 167, 25, 0.5);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: all 0.1s ease;
+    }
 
-      #MainButton {
-        width: 7.5vh;
-        height: 7.5vh;
-        position: fixed;
-        left: 50vw;
-        top: 95vh;
-        translate: -50% -50%;
-        color: white;
-        font-size: 3vh;
-        text-align: center;
-        background-color: black;
-        border: 1px solid rgb(100, 100, 100);
-        border-radius: 50%;
-        transition: font-size 0.15s ease, transform 0.25s ease;
-        cursor: pointer;
-      }
+    #MouseGlowBlur {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: rgba(255, 167, 25, 0.25);
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      backdrop-filter: blur(10px);
+      transition: all 0.1s ease;
+    }
 
-      #MainButton:hover {
-        font-size: 4vh;
-      }
+    /* Header Styles */
+    header {
+      text-align: center;
+      margin-top: 50px;
+    }
 
-      #MouseGlow {
-        width: 30vmax;
-        height: 30vmax;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        translate: -50% -50%;
-        background-color: rgba(255, 167, 25, 0.25);
-        border-radius: 50%;
-      }
+    header img {
+      border-radius: 80%;
+      width: 150px;
+      height: auto;
+      margin-top: 30px;
+    }
 
-      #MouseGlowBlur {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        backdrop-filter: blur(12vmax);
-      }
+    header h1 {
+      font-size: 3em;
+    }
 
-      /* Glowing effect for links */
-      a:hover {
-        animation: glow 1s infinite alternate;
-      }
+    header p {
+      font-size: 1.2em;
+      color: lightgray;
+    }
 
-      @keyframes glow {
-        0% {
-          box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
-        }
-        50% {
-          box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 25px cyan;
-        }
-        100% {
-          box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan;
-        }
-      }
+    /* Navigation Bar Styles */
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+      margin-top: 20px;
+    }
 
-      h1, h2, p {
-        color: white;
-        pointer-events: auto;
-      }
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
 
-      h1 {
-        font-size: 5.5vh;
-        margin: 0 0 1vh 0;
-        font-weight: bold;
-      }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1em;
+    }
 
-      h2 {
-        font-size: 2vh;
-        margin: 0 0 1.5vh 0;
-        font-weight: normal;
-      }
+    nav ul li a:hover {
+      color: orange;
+    }
 
-      p {
-        font-size: 1.6vh;
-        margin: 0;
-        color: gray;
-        line-height: 2.5vh;
-      }
+    /* Main Content Styles */
+    section {
+      padding: 20px;
+    }
 
-      .wrapper {
-        position: relative;
-      }
+    section h1 {
+      font-size: 2.5em;
+    }
 
-      nav {
-        text-align: center;
-        margin-top: 20px;
-      }
+    section ul li {
+      margin: 10px 0;
+    }
 
-      nav ul {
-        list-style-type: none;
-        display: inline-block;
-      }
+    /* Footer Styles */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+    }
 
-      nav li {
-        display: inline-block;
-        margin: 0 20px;
-      }
+    footer .socials a {
+      color: lightgray;
+      margin: 0 10px;
+      text-decoration: none;
+    }
 
-      footer {
-        text-align: center;
-        margin-top: 50px;
-      }
+    footer .socials a:hover {
+      color: orange;
+    }
+  </style>
+</head>
+<body>
 
-      .socials {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-      }
+  <!-- Add Glow Divs -->
+  <div id="MouseGlow"></div>
+  <div id="MouseGlowBlur"></div>
 
-      .socials a {
-        color: #ccc;
-        text-decoration: none;
-        font-size: 1.2vh;
-      }
+  <div class="wrapper">
+    <header>
+      <h1>Niranjan Sujay</h1>
+      <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
+      <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
+      <p class="view">
+        <a href="https://github.com/YourGitHubUsername">View the Project on GitHub <small>Your GitHub Username</small></a>
+      </p>
+    </header>
 
-      .socials a:hover {
-        color: white;
-      }
+    <!-- Horizontal Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="experiences.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-      .projects ul {
-        padding: 0;
-      }
+    <section>
+      <h1>Welcome to My Portfolio</h1>
+      <p><em>View the <a href="https://github.com/YourGitHubUsername/PortfolioProject">source of this content</a>.</em></p>
 
-      .projects li {
-        list-style: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Niranjan Sujay</h1>
-        <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
-        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
-        <p class="view">
-          <a href="https://github.com/YourGitHubUsername">View the Project on GitHub <small>Your GitHub Username</small></a>
-        </p>
-      </header>
+      <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
 
-      <!-- Horizontal Navigation Bar -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="experiences.html">Experience</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <h2>Explore My Projects</h2>
+      <p>Click on the project names below to explore more details:</p>
+      <ul>
+        <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
+        <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
+        <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
+        <li><a href="projects/curb2door/index.html">Curb2Door</a></li>
+        <li><a href="projects/diffusion-models/index.html">Diffusion Models</a></li>
+        <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
+      </ul>
+    </section>
 
-      <section>
-        <h1>Welcome to My Portfolio</h1>
-        <p><em>View the <a href="https://github.com/YourGitHubUsername/PortfolioProject">source of this content</a>.</em></p>
-        <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
+    <footer>
+      <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
 
-        <h2>Explore My Projects</h2>
-        <p>Click on the project names below to explore more details:</p>
-        <ul>
-          <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
-          <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
-          <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
-          <li><a href="projects/curb2door/index.html">Curb2Door</a></li>
-          <li><a href="projects/diffusion-models/index.html">Diffusion Models</a></li>
-          <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
-        </ul>
-      </section>
+      <!-- Social Media Links -->
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
+        <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
+        <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
+        <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
+      </div>
+    </footer>
+  </div>
 
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
+  <script src="javascripts/scale.fix.js"></script>
 
-        <!-- Social Media Links -->
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
-          <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
-          <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
-          <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
-        </div>
-      </footer>
-    </div>
+  <!-- JavaScript for Mouse Glow -->
+  <script>
+    const mouseGlow = document.getElementById("MouseGlow");
+    const mouseGlowBlur = document.getElementById("MouseGlowBlur");
 
-    <script src="javascripts/scale.fix.js"></script>
-  </body>
+    document.addEventListener("mousemove", (e) => {
+        const { clientX: x, clientY: y } = e;
+        mouseGlow.style.transform = `translate(${x}px, ${y}px)`;
+        mouseGlowBlur.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+</body>
 </html>
