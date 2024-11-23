@@ -32,9 +32,39 @@
       a:hover {
         animation: glow 1s infinite alternate;
       }
+
+      /* Cursor Glow Effect */
+      #MouseGlow, #MouseGlowBlur {
+        position: absolute;
+        pointer-events: none;
+        border-radius: 50%;
+        mix-blend-mode: screen;
+      }
+
+      /* Main Glow Circle */
+      #MouseGlow {
+        width: 20px;
+        height: 20px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.2) 70%);
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+      }
+
+      /* Secondary Blur Effect */
+      #MouseGlowBlur {
+        width: 60px;
+        height: 60px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 80%);
+        transform: translate(-50%, -50%);
+        z-index: 9998;
+      }
     </style>
   </head>
   <body>
+    <!-- Add Glow Divs -->
+    <div id="MouseGlow"></div>
+    <div id="MouseGlowBlur"></div>
+
     <div class="wrapper">
       <header>
         <h1>Niranjan Sujay</h1>
@@ -86,6 +116,19 @@
         </div>
       </footer>
     </div>
+
     <script src="javascripts/scale.fix.js"></script>
+
+    <!-- JavaScript for Mouse Glow -->
+    <script>
+      const mouseGlow = document.getElementById("MouseGlow");
+      const mouseGlowBlur = document.getElementById("MouseGlowBlur");
+
+      document.addEventListener("mousemove", (e) => {
+          const { clientX: x, clientY: y } = e;
+          mouseGlow.style.transform = `translate(${x}px, ${y}px)`;
+          mouseGlowBlur.style.transform = `translate(${x}px, ${y}px)`;
+      });
+    </script>
   </body>
 </html>
