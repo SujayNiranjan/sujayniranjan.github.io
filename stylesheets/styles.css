@@ -1,3 +1,33 @@
+/* Your existing styles */
+
+/* New styles for glowing and blending effect */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(145deg, #2f2f2f, #121212);
+  height: 100vh;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #ff7f50;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: width 0.3s ease, height 0.3s ease;
+  box-shadow: 0 0 50px rgba(255, 127, 80, 0.5); /* Glowing effect */
+  filter: blur(30px); /* Creates a soft, blended glow effect */
+  opacity: 0.7; /* Optional to make it more subtle */
+}
+
+.circle:hover {
+  width: 120px; /* Slightly increase size on hover */
+  height: 120px;
+}
+
+/* Your existing body styles can be included or replaced here */
 body {
   background-color: #1c1c1c; /* Dark background */
   padding: 50px;
@@ -41,17 +71,6 @@ a {
 
 a:hover {
   color: #00bcd4; /* Hover color for links */
-}
-
-a small {
-  font-size: 11px;
-  color: #999;
-  margin-top: -0.3em;
-  display: block;
-}
-
-a:hover small {
-  color: #999;
 }
 
 .wrapper {
@@ -148,7 +167,6 @@ header ul a {
   padding: 0 5px; /* Adds spacing for text */
   text-align: center;
 }
-
 
 header ul a:hover {
   color: #ddd;
