@@ -57,13 +57,14 @@
         </footer>
     </div>
 
-    <!-- JavaScript for making the circle follow the cursor -->
+    <!-- JavaScript for making the circle follow the cursor with depth effect -->
     <script>
         const circle = document.querySelector('.circle');
 
         document.addEventListener('mousemove', (event) => {
             circle.style.left = event.clientX - circle.offsetWidth / 2 + 'px';
             circle.style.top = event.clientY - circle.offsetHeight / 2 + 'px';
+            circle.style.transform = 'translate3d(0, 0, -200px)'; // Adding depth effect
         });
     </script>
 </body>
