@@ -14,20 +14,19 @@
             font-family: Arial, sans-serif;
         }
 
-
-            .custom-cursor {
-                position: fixed;
-                pointer-events: none;
-                width: 200px; /* Increased size */
-                height: 200px;
-                border-radius: 50%;
-                z-index: 9999;
-                background: radial-gradient(circle, rgba(255, 160, 50, 0.8) 0%, rgba(255, 160, 50, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
-                box-shadow: 0 0 120px 50px rgba(255, 160, 50, 0.6); /* Enhanced intensity and seamless effect */
-                transition: transform 0.1s ease, opacity 0.2s ease;
-                mix-blend-mode: overlay;
-            }
-
+        .custom-cursor {
+            position: fixed;
+            pointer-events: none;
+            width: 250px; /* Increased size */
+            height: 250px;
+            border-radius: 50%;
+            z-index: 9999;
+            background: radial-gradient(circle, rgba(255, 160, 50, 0.8) 0%, rgba(255, 160, 50, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+            box-shadow: 0 0 120px 50px rgba(255, 160, 50, 0.6); /* Enhanced intensity and seamless effect */
+            transition: transform 0.1s ease, opacity 0.2s ease;
+            mix-blend-mode: overlay;
+            pointer-events: none;
+        }
 
         nav a, section a {
             text-decoration: none;
@@ -104,11 +103,12 @@
             </div>
         </footer>
     </div>
+
     <script>
         const cursor = document.querySelector('.custom-cursor');
         document.addEventListener('mousemove', (event) => {
-            cursor.style.left = event.clientX + 'px';
-            cursor.style.top = event.clientY + 'px';
+            cursor.style.left = event.clientX - cursor.offsetWidth / 2 + 'px';
+            cursor.style.top = event.clientY - cursor.offsetHeight / 2 + 'px';
         });
 
         document.addEventListener('mouseenter', () => {
