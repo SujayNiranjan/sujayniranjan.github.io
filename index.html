@@ -1,93 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Niranjan Sujay's Portfolio</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
-            height: 100vh;
-            background: #121212;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
         }
 
         .custom-cursor {
             position: fixed;
             pointer-events: none;
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 80%);
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-            transition: transform 0.1s, opacity 0.2s;
-        }
-
-        .content {
-            text-align: center;
-            margin-top: 20vh;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4);
             z-index: 1;
+            transition: transform 0.1s ease, opacity 0.2s ease;
         }
 
-        .content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .custom-cursor.active {
+            transform: scale(1.5);
         }
 
-        .content p {
-            font-size: 1.5rem;
-            line-height: 1.6;
+        .wrapper {
+            position: relative;
+            z-index: 2; /* Ensures content is above the cursor */
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        .content ul {
-            list-style: none;
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav ul {
             padding: 0;
-            margin-top: 1.5rem;
+            list-style: none;
+            text-align: center;
         }
 
-        .content ul li {
-            margin: 0.5rem 0;
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
         }
 
-        .content ul li a {
-            color: #00adef;
+        nav ul li a {
             text-decoration: none;
-            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
         }
 
-        .content ul li a:hover {
-            text-decoration: underline;
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
         }
     </style>
 </head>
 <body>
     <div class="custom-cursor"></div>
-    <div class="content">
-        <h1>Niranjan Sujay</h1>
-        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
-        <p>My research focuses on sensor fusion, state estimation, and localization for robotic systems.</p>
-        <h2>Explore My Projects</h2>
-        <ul>
-            <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
-            <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
-            <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
-            <li><a href="projects/curb2door/index.html">Curb2Door</a></li>
-            <li><a href="projects/diffusion-models/index.html">Diffusion Models</a></li>
-            <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
-        </ul>
+    <div class="wrapper">
+        <header>
+            <h1>Niranjan Sujay</h1>
+            <img src="Images/nyu_pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
+            <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
+            <p class="view">
+                <a href="https://github.com/YourGitHubUsername">View the Project on GitHub <small>Your GitHub Username</small></a>
+            </p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experiences.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h1>Welcome to My Portfolio</h1>
+            <p>My research focuses on advancing robotic perception, mapping, and autonomy with a special interest in sensor fusion, state estimation, and localization for robotic systems.</p>
+            <h2>Explore My Projects</h2>
+            <ul>
+                <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
+                <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
+                <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
+            </ul>
+        </section>
+        <footer>
+            <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
+        </footer>
     </div>
-
     <script>
         const cursor = document.querySelector('.custom-cursor');
 
-        document.addEventListener('mousemove', (event) => {
-            const { clientX, clientY } = event;
-            cursor.style.transform = `translate(${clientX}px, ${clientY}px)`;
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+
+        document.addEventListener('mousedown', () => {
+            cursor.classList.add('active');
+        });
+
+        document.addEventListener('mouseup', () => {
+            cursor.classList.remove('active');
         });
     </script>
 </body>
