@@ -11,46 +11,6 @@ body {
   color: #e0e0e0; /* Light text color */
   font-weight: 400;
 }
-
-function drawSineWave() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.beginPath();
-    context.moveTo(0, canvas.height / 2);
-
-    for (let x = 0; x < canvas.width; x++) {
-        const y = canvas.height / 2 + Math.sin(x * waveFrequency + Date.now() / 100) * waveAmplitude;
-        context.lineTo(x, y);
-    }
-
-    context.strokeStyle = 'rgba(255, 165, 0, 0.5)'; // Color of the wave
-    context.lineWidth = 2;
-    context.stroke();
-}
-  
-function randomEquation() {
-    const operators = ['+', '-', '*', '/'];
-    return `${Math.floor(Math.random() * 10)} ${operators[Math.floor(Math.random() * operators.length)]} ${Math.floor(Math.random() * 10)}`;
-}
-                                                                                                           
-function drawBackground() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-    context.globalAlpha = 0.1; // Set opacity for background elements
-
-    for (let i = 0; i < 5; i++) {
-        const equation = randomEquation();
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-
-        context.font = '20px Arial';
-        context.fillStyle = 'rgba(255, 255, 255, 0.5)';
-        context.fillText(equation, x, y);
-
-        context.beginPath();
-        context.moveTo(x, y);
-
-        for (let j = 0; j < 200; j++) {
-            const offset[_{{{CITATION{{{_1{](https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/9598774e62c34e55a4ca69817431af7d6abdde22/cache.php)
-
 /* Circle styling for glowing and blending effect */
 .circle {
   position: absolute;
