@@ -57,22 +57,34 @@
         </footer>
     </div>
 
-    <!-- JavaScript for making the circle follow the cursor with depth effect -->
+    <!-- JavaScript for making the circle follow the cursor with depth effect and wave motion -->
     <script>
         const circle = document.querySelector('.circle');
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let lastX = mouseX, lastY = mouseY;
+        let waveAmplitude = 10; // Adjust the amplitude of the wave motion
 
         document.addEventListener('mousemove', (event) => {
-            circle.style.left = event.clientX - circle.offsetWidth / 2 + 'px';
-            circle.style.top = event.clientY - circle.offsetHeight / 2 + 'px';
-            circle.style.transform = 'translate3d(0, 0, -100px)'; // Adjusting depth effect
+            mouseX = event.clientX - circle.offsetWidth / 2;
+            mouseY = event.clientY - circle.offsetHeight / 2;
         });
 
+        function animate() {
+            lastX += (mouseX - lastX) * 0.1;
+            lastY += (mouseY - lastY) * 0.1;
+            const wave = Math.sin(Date.now() / 200) * waveAmplitude; // Wave motion calculation
+            circle.style.transform = `translate3d(${lastX}px, ${lastY + wave}px, -100px)`; // Applying wave motion
+            requestAnimationFrame(animate);
+        }
+
+        animate(); // Start the animation loop
+
         document.addEventListener('mouseleave', () => {
-            circle.style.opacity = 0.5; // Make circle disappear when cursor leaves viewport
+            circle.style.opacity = 0; // Make circle disappear when cursor leaves viewport
         });
 
         document.addEventListener('mouseenter', () => {
-            circle.style.opacity = 0.9; // Make circle reappear when cursor enters viewport
+            circle.style.opacity = 0.8; // Make circle reappear when cursor enters viewport
         });
     </script>
 </body>
