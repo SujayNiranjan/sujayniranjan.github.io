@@ -22,7 +22,7 @@ body {
   pointer-events: none;
   transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease, opacity 0.2s ease;
   box-shadow: 0 0 100px rgba(255, 165, 0, 0.7); /* Enhanced glowing effect */
-  filter: blur(1000px); /* Creates a soft, blended glow effect */
+  filter: blur(100px); /* Creates a soft, blended glow effect */
   opacity: 0.8; /* Optional to make it more subtle */
   mix-blend-mode: overlay; /* For a layered effect */
 }
