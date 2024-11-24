@@ -26,7 +26,7 @@ body {
   opacity: 0.8; /* Optional to make it more subtle */
   mix-blend-mode: overlay; /* For a layered effect */
 }
-
+/* Animating wave motion */ @keyframes wave { 0%, 100% { transform: translate3d(0, 0, -100px) scale(1); } 50% { transform: translate3d(0, -10px, -100px) scale(1.05); } }
 .circle:hover {
   width: 250px; /* Slightly increase size on hover */
   height: 250px;
