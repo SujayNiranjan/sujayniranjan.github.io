@@ -12,6 +12,21 @@ body {
   font-weight: 400;
 }
 
+function drawSineWave() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.beginPath();
+    context.moveTo(0, canvas.height / 2);
+
+    for (let x = 0; x < canvas.width; x++) {
+        const y = canvas.height / 2 + Math.sin(x * waveFrequency + Date.now() / 100) * waveAmplitude;
+        context.lineTo(x, y);
+    }
+
+    context.strokeStyle = 'rgba(255, 165, 0, 0.5)'; // Color of the wave
+    context.lineWidth = 2;
+    context.stroke();
+}
+
 /* Circle styling for glowing and blending effect */
 .circle {
   position: absolute;
