@@ -15,10 +15,8 @@
             width: 100%;
             height: 100%;
             background-color: #121212; /* Dark background */
-            font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
             color: #e0e0e0; /* Light text color */
-            font-weight: 400;
-            position: relative; /* Ensure content is positioned relative to viewport */
         }
 
         canvas#backgroundCanvas {
@@ -30,47 +28,23 @@
 
         .circle {
             position: absolute;
-            width: 200px; /* Increased size */
+            width: 200px;
             height: 200px;
             background: rgba(255, 165, 0, 0.7); /* Orangish yellow */
             border-radius: 50%;
             pointer-events: none;
-            transition: transform 0.1s ease-out; /* Smooth transition */
-            box-shadow: 0 0 100px rgba(255, 165, 0, 0.7); /* Enhanced glowing effect */
-            filter: blur(10px); /* Creates a soft, blended glow effect */
-            opacity: 0.8; /* Optional to make it more subtle */
-            mix-blend-mode: overlay; /* For a layered effect */
-            z-index: 1; /* Ensure circle is above canvas but below content */
-        }
-
-        @keyframes wave {
-            0%, 100% { transform: translate3d(0, 0, -100px) scale(1); }
-            50% { transform: translate3d(0, -10px, -100px) scale(1.05); }
-        }
-
-        .circle:hover {
-            width: 250px; /* Slightly increase size on hover */
-            height: 250px;
-        }
-
-        .circle::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: inherit;
-            filter: blur(30px); /* Increased blur for motion effect */
-            opacity: 0.6;
+            box-shadow: 0 0 100px rgba(255, 165, 0, 0.7);
+            filter: blur(15px); /* Creates a soft, blended glow effect */
+            opacity: 0.8;
+            transition: transform 0.1s ease-out;
+            z-index: 1; /* Above canvas but below content */
         }
     </style>
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
-    <div class="circle"></div> <!-- Adding the glowing circle -->
-    <div class="wrapper" style="position: relative; z-index: 2;"> <!-- Ensure wrapper is above canvas and circle -->
+    <div class="circle"></div>
+    <div class="wrapper" style="position: relative; z-index: 2;">
         <header>
             <h1>Niranjan Sujay</h1>
             <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
@@ -93,9 +67,8 @@
         <section>
             <h1>Welcome to My Portfolio</h1>
             <p><em>View the <a href="https://github.com/YourGitHubUsername/PortfolioProject">source of this content</a>.</em></p>
-            <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
+            <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems.</p>
             <h2>Explore My Projects</h2>
-            <p>Click on the project names below to explore more details:</p>
             <ul>
                 <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
                 <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
@@ -108,26 +81,16 @@
 
         <footer>
             <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
-                <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
-                <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
-                <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
-            </div>
         </footer>
     </div>
 
-    <!-- JavaScript for the dynamic background and circle effect -->
     <script>
         const canvas = document.getElementById('backgroundCanvas');
         const context = canvas.getContext('2d');
         const circle = document.querySelector('.circle');
-        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-        let lastX = mouseX, lastY = mouseY;
-        let waveAmplitude = 10; // Adjust the amplitude of the wave motion
-        let waveFrequency = 0.005; // Adjust the frequency of the wave motion
 
-        // Resize canvas to full window
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
@@ -136,66 +99,39 @@
             canvas.height = window.innerHeight;
         });
 
-        // Generate random math equation
+        document.addEventListener('mousemove', (event) => {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+        });
+
         function randomEquation() {
             const operators = ['+', '-', '*', '/'];
-            return `${Math.floor(Math.random() * 10)} ${operators[Math.floor(Math.random() * operators.length)]} ${Math.floor(Math.random() * 10)}`;
+            const num1 = Math.floor(Math.random() * 10);
+            const num2 = Math.floor(Math.random() * 10) + 1; // Avoid division by zero
+            const operator = operators[Math.floor(Math.random() * operators.length)];
+            return `${num1} ${operator} ${num2}`;
         }
 
-        // Draw random oscillating graphs and equations
         function drawBackground() {
             context.clearRect(0, 0, canvas.width, canvas.height);
-            context.globalAlpha = 0.05; // Set opacity for background elements
+            context.globalAlpha = 0.1;
+            context.font = '16px Arial';
 
-            for (let i = 0; i < 5; i++) {
-                const equation = randomEquation();
+            for (let i = 0; i < 10; i++) {
                 const x = Math.random() * canvas.width;
                 const y = Math.random() * canvas.height;
-
-                context.font = '20px Arial';
-                context.fillStyle = 'rgba(255, 255, 255, 0.1)';
-                context.fillText(equation, x, y);
-
-                context.beginPath();
-                context.moveTo(x, y);
-
-                for (let j = 0; j < 200; j++) {
-                    const offsetX = x + j;
-                    const offsetY = y + Math.sin(j * waveFrequency + Date.now() / 1000) * waveAmplitude;
-                    context.lineTo(offsetX, offsetY);
-                }
-
-                context.strokeStyle = 'rgba(255, 165, 0, 0.1)'; // Color of the graphs
-                context.lineWidth = 1;
-                context.stroke();
+                context.fillStyle = 'rgba(255, 165, 0, 0.3)';
+                context.fillText(randomEquation(), x, y);
             }
         }
 
         function animate() {
-[_{{{CITATION{{{_1{](https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/9598774e62c34e55a4ca69817431af7d6abdde22/cache.php)[_{{{CITATION{{{_2{](https://github.com/ferrarl/AnchorspaceMM/tree/79e1067359b664470ba51f778faea1b5a9f01686/assets%2Fjs%2Fstyles.js)
-        function animate() {
-            lastX += (mouseX - lastX) * 0.1;
-            lastY += (mouseY - lastY) * 0.1;
-            const wave = Math.sin(Date.now() / 200) * waveAmplitude; // Wave motion calculation
-            circle.style.transform = `translate3d(${lastX}px, ${lastY + wave}px, -100px)`; // Applying wave motion
-            drawBackground(); // Draw the background elements
+            circle.style.transform = `translate(${mouseX - 100}px, ${mouseY - 100}px)`;
+            drawBackground();
             requestAnimationFrame(animate);
         }
 
-        animate(); // Start the animation loop
-
-        document.addEventListener('mousemove', (event) => {
-            mouseX = event.clientX - circle.offsetWidth / 2;
-            mouseY = event.clientY - circle.offsetHeight / 2;
-        });
-
-        document.addEventListener('mouseleave', () => {
-            circle.style.opacity = 0; // Make circle disappear when cursor leaves viewport
-        });
-
-        document.addEventListener('mouseenter', () => {
-            circle.style.opacity = 0.8; // Make circle reappear when cursor enters viewport
-        });
+        animate();
     </script>
 </body>
 </html>
