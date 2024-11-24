@@ -86,6 +86,62 @@
         document.addEventListener('mouseenter', () => {
             circle.style.opacity = 0.8; // Make circle reappear when cursor enters viewport
         });
+        const canvas = document.getElementById('sineWaveCanvas');
+        const context = canvas.getContext('2d');
+        const circle = document.querySelector('.circle');
+        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
+        let lastX = mouseX, lastY = mouseY;
+        let waveAmplitude = 10; // Adjust the amplitude of the wave motion
+        let waveFrequency = 0.02; // Adjust the frequency of the wave motion
+
+        // Resize canvas to full window
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        function drawSineWave() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.beginPath();
+            context.moveTo(0, canvas.height / 2);
+
+            for (let x = 0; x < canvas.width; x++) {
+                const y = canvas.height / 2 + Math.sin(x * waveFrequency + Date.now() / 100) * waveAmplitude;
+                context.lineTo(x, y);
+            }
+
+            context.strokeStyle = 'rgba(255, 165, 0, 0.5)'; // Color of the wave
+            context.lineWidth = 2;
+            context.stroke();
+        }
+
+        function animate() {
+            lastX += (mouseX - lastX) * 0.1;
+            lastY += (mouseY - lastY) * 0.1;
+            const wave = Math.sin(Date.now() / 200) * waveAmplitude; // Wave motion calculation
+            circle.style.transform = `translate3d(${lastX}px, ${lastY + wave}px, -100px)`; // Applying wave motion
+            drawSineWave();
+            requestAnimationFrame(animate);
+        }
+
+        animate(); // Start the animation loop
+
+        document.addEventListener('mousemove', (event) => {
+            mouseX = event.clientX - circle.offsetWidth / 2;
+            mouseY = event.clientY - circle.offsetHeight / 2;
+        });
+
+        document.addEventListener('mouseleave', () => {
+            circle.style.opacity = 0; // Make circle disappear when cursor leaves viewport
+        });
+
+        document.addEventListener('mouseenter', () => {
+            circle.style.opacity = 0.8; // Make circle reappear when cursor enters viewport
+        });
+        
     </script>
 </body>
 </html>
