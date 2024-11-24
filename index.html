@@ -18,6 +18,14 @@
             font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             color: #e0e0e0; /* Light text color */
             font-weight: 400;
+            position: relative; /* Ensure content is positioned relative to viewport */
+        }
+
+        canvas#backgroundCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure canvas is behind the content */
         }
 
         .circle {
@@ -32,6 +40,7 @@
             filter: blur(10px); /* Creates a soft, blended glow effect */
             opacity: 0.8; /* Optional to make it more subtle */
             mix-blend-mode: overlay; /* For a layered effect */
+            z-index: 1; /* Ensure circle is above canvas but below content */
         }
 
         @keyframes wave {
@@ -61,7 +70,7 @@
 <body>
     <canvas id="backgroundCanvas"></canvas>
     <div class="circle"></div> <!-- Adding the glowing circle -->
-    <div class="wrapper">
+    <div class="wrapper" style="position: relative; z-index: 2;"> <!-- Ensure wrapper is above canvas and circle -->
         <header>
             <h1>Niranjan Sujay</h1>
             <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
@@ -162,7 +171,9 @@
             }
         }
 
-       function animate() {
+        function animate() {
+[_{{{CITATION{{{_1{](https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/9598774e62c34e55a4ca69817431af7d6abdde22/cache.php)[_{{{CITATION{{{_2{](https://github.com/ferrarl/AnchorspaceMM/tree/79e1067359b664470ba51f778faea1b5a9f01686/assets%2Fjs%2Fstyles.js)
+        function animate() {
             lastX += (mouseX - lastX) * 0.1;
             lastY += (mouseY - lastY) * 0.1;
             const wave = Math.sin(Date.now() / 200) * waveAmplitude; // Wave motion calculation
