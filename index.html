@@ -7,15 +7,6 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
@@ -95,7 +86,7 @@
         // Draw random oscillating graphs and equations
         function drawBackground() {
             context.clearRect(0, 0, canvas.width, canvas.height);
-            context.globalAlpha = 0.1; // Set opacity for background elements
+            context.globalAlpha = 0.05; // Set opacity for background elements
 
             for (let i = 0; i < 5; i++) {
                 const equation = randomEquation();
@@ -103,7 +94,7 @@
                 const y = Math.random() * canvas.height;
 
                 context.font = '20px Arial';
-                context.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                context.fillStyle = 'rgba(255, 255, 255, 0.1)';
                 context.fillText(equation, x, y);
 
                 context.beginPath();
@@ -111,11 +102,11 @@
 
                 for (let j = 0; j < 200; j++) {
                     const offsetX = x + j;
-                    const offsetY = y + Math.sin(j * waveFrequency + Date.now() / 100) * waveAmplitude;
+                    const offsetY = y + Math.sin(j * waveFrequency + Date.now() / 1000) * waveAmplitude;
                     context.lineTo(offsetX, offsetY);
                 }
 
-                context.strokeStyle = 'rgba(255, 165, 0, 0.3)'; // Color of the graphs
+                context.strokeStyle = 'rgba(255, 165, 0, 0.1)'; // Color of the graphs
                 context.lineWidth = 1;
                 context.stroke();
             }
@@ -125,6 +116,7 @@
             lastX += (mouseX - lastX) * 0.1;
             lastY += (mouseY - lastY) * 0.1;
             const wave = Math.sin(Date.now() / 200) * waveAmplitude; // Wave motion calculation
+            circle.style.transform = `translate3d[_{{{CITATION{{{_1{](https://github.com/ferrarl/AnchorspaceMM/tree/79e1067359b664470ba51f778faea1b5a9f01686/assets%2Fjs%2Fstyles.js)[_{{{CITATION{{{_2{](https://github.com/Academy-Soft-Intellect/PHP-MySQL-Course/tree/9598774e62c34e55a4ca69817431af7d6abdde22/cache.php)
             circle.style.transform = `translate3d(${lastX}px, ${lastY + wave}px, -100px)`; // Applying wave motion
             drawBackground(); // Draw the background elements
             requestAnimationFrame(animate);
