@@ -8,43 +8,44 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body, html {
+        body {
             margin: 0;
-            padding: 0;
             overflow: hidden;
-            width: 100%;
-            height: 100%;
-            background-color: #121212; /* Dark background */
-            font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-            color: #e0e0e0; /* Light text color */
-        }
-
-        canvas#backgroundCanvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1; /* Ensure canvas is behind the content */
+            font-family: Arial, sans-serif;
         }
 
         .circle {
             position: absolute;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 165, 0, 0.7); /* Orangish yellow */
+            top: 50%;
+            left: 50%;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 128, 255, 0.8);
             border-radius: 50%;
             pointer-events: none;
-            box-shadow: 0 0 100px rgba(255, 165, 0, 0.7);
-            filter: blur(15px); /* Creates a soft, blended glow effect */
-            opacity: 0.8;
-            transition: transform 0.1s ease-out;
-            z-index: 1; /* Above canvas but below content */
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the canvas is behind the main content */
+        }
+
+        .wrapper {
+            z-index: 1;
+            position: relative;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <canvas id="backgroundCanvas"></canvas>
-    <div class="circle"></div>
-    <div class="wrapper" style="position: relative; z-index: 2;">
+    <div class="circle"></div> <!-- Circle animation -->
+    <div class="wrapper">
         <header>
             <h1>Niranjan Sujay</h1>
             <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
@@ -53,7 +54,6 @@
                 <a href="https://github.com/YourGitHubUsername">View the Project on GitHub <small>Your GitHub Username</small></a>
             </p>
         </header>
-
         <nav style="text-align: center; margin-top: 20px;">
             <ul style="list-style-type: none; display: inline-block;">
                 <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
@@ -63,12 +63,12 @@
                 <li style="display: inline-block; margin: 0 20px;"><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
         <section>
             <h1>Welcome to My Portfolio</h1>
             <p><em>View the <a href="https://github.com/YourGitHubUsername/PortfolioProject">source of this content</a>.</em></p>
-            <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems.</p>
+            <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
             <h2>Explore My Projects</h2>
+            <p>Click on the project names below to explore more details:</p>
             <ul>
                 <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
                 <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
@@ -78,60 +78,82 @@
                 <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
             </ul>
         </section>
-
         <footer>
             <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
+                <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
+                <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
+                <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
+            </div>
         </footer>
     </div>
 
+    <!-- JavaScript for animations -->
     <script>
-        const canvas = document.getElementById('backgroundCanvas');
-        const context = canvas.getContext('2d');
+        // Circle animation
         const circle = document.querySelector('.circle');
-
         let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
+        let lastX = mouseX, lastY = mouseY;
+        let waveAmplitude = 10;
 
         document.addEventListener('mousemove', (event) => {
-            mouseX = event.clientX;
-            mouseY = event.clientY;
+            mouseX = event.clientX - circle.offsetWidth / 2;
+            mouseY = event.clientY - circle.offsetHeight / 2;
         });
 
-        function randomEquation() {
-            const operators = ['+', '-', '*', '/'];
-            const num1 = Math.floor(Math.random() * 10);
-            const num2 = Math.floor(Math.random() * 10) + 1; // Avoid division by zero
-            const operator = operators[Math.floor(Math.random() * operators.length)];
-            return `${num1} ${operator} ${num2}`;
+        function animateCircle() {
+            lastX += (mouseX - lastX) * 0.1;
+            lastY += (mouseY - lastY) * 0.1;
+            const wave = Math.sin(Date.now() / 200) * waveAmplitude;
+            circle.style.transform = `translate3d(${lastX}px, ${lastY + wave}px, -100px)`;
+            requestAnimationFrame(animateCircle);
         }
+        animateCircle();
 
-        function drawBackground() {
-            context.clearRect(0, 0, canvas.width, canvas.height);
-            context.globalAlpha = 0.1;
-            context.font = '16px Arial';
+        // Math animations on canvas
+        const canvas = document.getElementById('backgroundCanvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
 
-            for (let i = 0; i < 10; i++) {
-                const x = Math.random() * canvas.width;
-                const y = Math.random() * canvas.height;
-                context.fillStyle = 'rgba(255, 165, 0, 0.3)';
-                context.fillText(randomEquation(), x, y);
+        const mathElements = [];
+
+        function generateMathElements() {
+            for (let i = 0; i < 30; i++) {
+                mathElements.push({
+                    x: Math.random() * width,
+                    y: height + Math.random() * 300,
+                    size: Math.random() * 40 + 10,
+                    speed: Math.random() * 1.5 + 0.5,
+                    text: Math.random() > 0.5 ? 'sin(x)' : 'cos(x)'
+                });
             }
         }
 
-        function animate() {
-            circle.style.transform = `translate(${mouseX - 100}px, ${mouseY - 100}px)`;
-            drawBackground();
-            requestAnimationFrame(animate);
+        function updateCanvas() {
+            ctx.clearRect(0, 0, width, height);
+            mathElements.forEach(element => {
+                element.y -= element.speed;
+                ctx.font = `${element.size}px Arial`;
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+                ctx.fillText(element.text, element.x, element.y);
+
+                if (element.y < -50) {
+                    element.y = height + 50;
+                    element.x = Math.random() * width;
+                }
+            });
+            requestAnimationFrame(updateCanvas);
         }
 
-        animate();
+        generateMathElements();
+        updateCanvas();
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
     </script>
 </body>
 </html>
