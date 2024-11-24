@@ -15,8 +15,8 @@ body {
 /* Circle styling for glowing and blending effect */
 .circle {
   position: absolute;
-  width: 500px; /* Increased size */
-  height: 500px;
+  width: 120px; /* Increased size */
+  height: 120px;
   background: rgba(255, 165, 0, 0.7); /* Orangish yellow */
   border-radius: 5%;
   pointer-events: none;
