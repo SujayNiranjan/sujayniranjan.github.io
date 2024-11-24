@@ -18,7 +18,7 @@ body {
   width: 200px; /* Increased size */
   height: 200px;
   background: rgba(255, 165, 0, 0.7); /* Orangish yellow */
-  border-radius: 20%;
+  border-radius: 5%;
   pointer-events: none;
   transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease, opacity 0.2s ease;
   box-shadow: 0 0 100px rgba(255, 165, 0, 0.7); /* Enhanced glowing effect */
