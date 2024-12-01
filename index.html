@@ -1,159 +1,56 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Niranjan Sujay's Portfolio</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
-        }
-
-        .circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 40px;
-            height: 40px;
-            background: rgba(0, 128, 255, 0.8);
-            border-radius: 50%;
-            pointer-events: none;
-            transition: opacity 0.2s ease-in-out;
-        }
-
-        canvas {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Ensure the canvas is behind the main content */
-        }
-
-        .wrapper {
-            z-index: 1;
-            position: relative;
-            text-align: center;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>Niranjan Sujay's Portfolio</title>
+  <link rel="stylesheet" href="stylesheets/styles.css">
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <canvas id="backgroundCanvas"></canvas>
-    <div class="circle"></div> <!-- Circle animation -->
-    <div class="wrapper">
-        <header>
-            <h1>Niranjan Sujay</h1>
-            <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
-            <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
-            <p class="view">
-                <a href="https://github.com/YourGitHubUsername">View the Project on GitHub <small>Your GitHub Username</small></a>
-            </p>
-        </header>
-        <nav style="text-align: center; margin-top: 20px;">
-            <ul style="list-style-type: none; display: inline-block;">
-                <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
-                <li style="display: inline-block; margin: 0 20px;"><a href="about.html">About Me</a></li>
-                <li style="display: inline-block; margin: 0 20px;"><a href="projects.html">Projects</a></li>
-                <li style="display: inline-block; margin: 0 20px;"><a href="experiences.html">Experience</a></li>
-                <li style="display: inline-block; margin: 0 20px;"><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-        <section>
-            <h1>Welcome to My Portfolio</h1>
-            <p><em>View the <a href="https://github.com/YourGitHubUsername/PortfolioProject">source of this content</a>.</em></p>
-            <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
-            <h2>Explore My Projects</h2>
-            <p>Click on the project names below to explore more details:</p>
-            <ul>
-                <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
-                <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
-                <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
-                <li><a href="projects/curb2door/index.html">Curb2Door</a></li>
-                <li><a href="projects/diffusion-models/index.html">Diffusion Models</a></li>
-                <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
-            </ul>
-        </section>
-        <footer>
-            <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
-                <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
-                <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
-                <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
-            </div>
-        </footer>
-    </div>
-
-    <!-- JavaScript for animations -->
-    <script>
-        // Circle animation
-        const circle = document.querySelector('.circle');
-        let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2;
-        let lastX = mouseX, lastY = mouseY;
-        let waveAmplitude = 10;
-
-        document.addEventListener('mousemove', (event) => {
-            mouseX = event.clientX - circle.offsetWidth / 2;
-            mouseY = event.clientY - circle.offsetHeight / 2;
-        });
-
-        function animateCircle() {
-            lastX += (mouseX - lastX) * 0.1;
-            lastY += (mouseY - lastY) * 0.1;
-            const wave = Math.sin(Date.now() / 200) * waveAmplitude;
-            circle.style.transform = `translate3d(${lastX}px, ${lastY + wave}px, -100px)`;
-            requestAnimationFrame(animateCircle);
-        }
-        animateCircle();
-
-        // Math animations on canvas
-        const canvas = document.getElementById('backgroundCanvas');
-        const ctx = canvas.getContext('2d');
-        let width = canvas.width = window.innerWidth;
-        let height = canvas.height = window.innerHeight;
-
-        const mathElements = [];
-
-        function generateMathElements() {
-            for (let i = 0; i < 30; i++) {
-                mathElements.push({
-                    x: Math.random() * width,
-                    y: height + Math.random() * 300,
-                    size: Math.random() * 40 + 10,
-                    speed: Math.random() * 1.5 + 0.5,
-                    text: Math.random() > 0.5 ? 'sin(x)' : 'cos(x)'
-                });
-            }
-        }
-
-        function updateCanvas() {
-            ctx.clearRect(0, 0, width, height);
-            mathElements.forEach(element => {
-                element.y -= element.speed;
-                ctx.font = `${element.size}px Arial`;
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
-                ctx.fillText(element.text, element.x, element.y);
-
-                if (element.y < -50) {
-                    element.y = height + 50;
-                    element.x = Math.random() * width;
-                }
-            });
-            requestAnimationFrame(updateCanvas);
-        }
-
-        generateMathElements();
-        updateCanvas();
-
-        window.addEventListener('resize', () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
-        });
-    </script>
+  <div class="wrapper">
+    <header>
+      <h1>Niranjan Sujay</h1>
+      <img src="Images/nyu pic.JPG" alt="Niranjan Sujay" style="width: 150px; height: auto; border-radius: 80%; margin-top: 30px;">
+      <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
+      <p class="view">
+        <a href="https://github.com/YourGitHubUsername">View the Project on GitHub <small>Your GitHub Username</small></a>
+      </p>
+    </header>
+    <nav style="text-align: center; margin-top: 20px;">
+      <ul style="list-style-type: none; display: inline-block;">
+        <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="about.html">About Me</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="projects.html">Projects</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="experiences.html">Experience</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <section>
+      <h1>Welcome to My Portfolio</h1>
+      <p><em>View the <a href="https://github.com/YourGitHubUsername/PortfolioProject">source of this content</a>.</em></p>
+      <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
+      <h2>Explore My Projects</h2>
+      <p>Click on the project names below to explore more details:</p>
+      <ul>
+        <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
+        <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
+        <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
+        <li><a href="projects/curb2door/index.html">Curb2Door</a></li>
+        <li><a href="projects/diffusion-models/index.html">Diffusion Models</a></li>
+        <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
+      </ul>
+    </section>
+    <footer>
+      <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> |
+        <a href="https://twitter.com/your-twitter-profile" target="_blank">Twitter</a> |
+        <a href="https://github.com/your-github-profile" target="_blank">GitHub</a> |
+        <a href="https://www.researchgate.net/profile/your-researchgate-profile" target="_blank">ResearchGate</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
