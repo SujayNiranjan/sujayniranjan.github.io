@@ -59,19 +59,16 @@
   <script>
     const circle = document.querySelector('.circle');
 
-    // Listen for mousemove events
-    document.addEventListener('mousemove', (event) => {
-      const x = event.clientX;
-      const y = event.clientY;
+// Update the circle's position based on the mouse movement
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
 
-      // Move the circle to the mouse position
-      circle.style.left = `${x}px`;
-      circle.style.top = `${y}px`;
+    // Position the circle at the mouse coordinates
+    circle.style.left = `${mouseX - circle.offsetWidth / 2}px`;
+    circle.style.top = `${mouseY - circle.offsetHeight / 2}px`;
+});
 
-      // Optionally, scale the circle based on mouse movement (smooth effect)
-      const scale = 1 + Math.sin(event.clientX * 0.1) * 0.2; // Dynamic scale
-      circle.style.transform = `translate(-50%, -50%) scale(${scale})`; // Move & scale the circle
-    });
   </script>
 </body>
 </html>
