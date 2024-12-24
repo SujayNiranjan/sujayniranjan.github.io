@@ -14,15 +14,15 @@ body {
 /* Circle styling for glowing and blending effect */
 .circle {
   position: absolute;
-  width: 120px; /* Increased size */
-  height: 120px;
+  width: 150px; /* Increased size */
+  height: 150px;
   background: rgba(255, 165, 0, 0.7); /* Orangish yellow */
   border-radius: 5%;
   pointer-events: none;
   transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease, opacity 0.2s ease;
   box-shadow: 0 0 100px rgba(255, 165, 0, 0.7); /* Enhanced glowing effect */
   filter: blur(50px); /* Creates a soft, blended glow effect */
-  opacity: 0.8; /* Optional to make it more subtle */
+  opacity: 0.9; /* Optional to make it more subtle */
   mix-blend-mode: overlay; /* For a layered effect */
 }
 /* Animating wave motion */ 
