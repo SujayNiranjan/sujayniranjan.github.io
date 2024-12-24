@@ -16,11 +16,11 @@ body {
   position: absolute;
   width: 30vmax; /* Increased size */
   height: 30vmax;
-  background: rgba(255, 165, 0, 0.7); /* Orangish yellow */
+  background: rgba(255, 167, 25, 0.25); /* Orangish yellow */
   border-radius: 50%;
   pointer-events: none;
   transition: width 0.3s ease, height 0.3s ease, transform 0.1s ease, opacity 0.2s ease;
-  box-shadow: 0 0 100px rgba(255, 165, 0, 0.7); /* Enhanced glowing effect */
+  box-shadow: 0 0 100px rgba(255, 167, 25, 0.25); /* Enhanced glowing effect */
   filter: blur(50px); /* Creates a soft, blended glow effect */
   z-index: -1;
   opacity: 0.9; /* Optional to make it more subtle */
