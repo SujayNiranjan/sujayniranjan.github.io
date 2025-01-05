@@ -1,4 +1,4 @@
-This is a mix of Jkell minial theme and 
+This is a mix of jekyll-theme-minimal and 
 
 Inspiration from - 
 @brittany chiang's website.  
