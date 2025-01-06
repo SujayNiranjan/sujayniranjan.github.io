@@ -7,6 +7,9 @@ body {
   color: #e0e0e0;
   font-weight: 400;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Circle Effects */
@@ -100,7 +103,7 @@ th, td {
 header, footer {
   width: 270px;
   float: left;
-  position: fixed;
+  position: static; /* Change from fixed to static */
 }
 
 header ul {
