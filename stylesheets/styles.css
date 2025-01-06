@@ -151,7 +151,7 @@ img {
 }
 
 header {
-  width: 270px;
+  width: 500px;
   float: left;
   position: fixed;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -161,10 +161,6 @@ header ul {
   list-style: none;
   height: 40px;
   padding: 0;
-  background: #2e2e2e; /* Darker background for header */
-  border-radius: 5px;
-  border: 1px solid #444;
-  width: 270px;
 }
 
 header li {
