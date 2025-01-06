@@ -107,5 +107,41 @@
         <p>© 2024 Niranjan Sujay. All rights reserved.</p>
       </footer>
     </div>
+      <!-- Circle element -->
+  <div class="circle"></div>
+
+  <script>
+    const circle = document.querySelector('.circle');
+
+    // Variables for the delay effect
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let speed = 0.1;  // Speed of the circle's delay (adjust this value for more/less delay)
+
+    // Update the target position on mousemove
+    document.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+    });
+
+    // Function to update the circle's position with a delay
+    function updateCirclePosition() {
+        // Calculate the difference between current and target positions
+        currentX += (targetX - currentX) * speed;
+        currentY += (targetY - currentY) * speed;
+
+        // Apply the new position to the circle
+        circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
+        circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
+
+        // Call the update function on the next animation frame
+        requestAnimationFrame(updateCirclePosition);
+    }
+
+    // Start the animation loop
+    updateCirclePosition();
+  </script>
   </body>
 </html>
