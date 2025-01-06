@@ -1,51 +1,78 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Niranjan Sujay's Resume" />
-    <title>Niranjan Sujay - Resume</title>
-    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon" />
-
-    <!-- Stylesheets -->
-    <link rel="stylesheets" href="styles.css" />
-</head>
-
-<body>
-    <!-- Header -->
-    <header id="header">
-        <div class="inner">
-            <h1 class="title">Niranjan Sujay</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="stylesheets/styles.css"> <!-- Include your CSS file here -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Niranjan Sujay</h1>
+        <img src="Images/new.jpg" alt="Niranjan Sujay" style="width: 200px; height: auto; margin-top: 30px; ">
+        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/niranjan-sujay/" target="_blank">LinkedIn</a> |
+          <a href="mailto:ns5428@nyu.edu" target="_blank">Email</a> |
+          <a href="https://github.com/SujayNiranjan" target="_blank">GitHub</a> |
+          <a href="https://www.researchgate.net/profile/Niranjan-Sujay" target="_blank">ResearchGate</a>
         </div>
-    </header>
+        <footer>
+          <p>This project is maintained by <a href="https://github.com/SujayNiranjan">Niranjan Sujay</a></p>
+        </footer>
+      </header>
+      <nav style="text-align: right; margin-top: 30px;">
+        <ul style="list-style-type: none; display: inline-block;">
+          <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="projects.html">Projects</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="experiences.html">Experience</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="publications.html">Publications</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="contact.html">Contact</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2>Resume</h2>     
+          <p>Below is the embedded PDF version of my resume. You can also download it using the link below.</p>
 
-    <!-- Main Content -->
-    <main id="main">
-        <section class="wrapper">
-            <div class="inner">
-                <h2>Resume</h2>
-                <p>Below is my professional resume. You can view or download it using the embedded viewer.</p>
-                <div style="overflow: auto; border: 1px solid #ccc; height: 80vh;">
-                    <!-- Embed your resume file here -->
-                    <iframe src="Niranjan_Sujay.pdf" style="width:100%; height:100%;" title="Niranjan Sujay Resume"></iframe>
-                </div>
-            </div>
+          <!-- Embed the PDF -->
+          <div style="width: 100%; height: 600px; overflow: hidden;">
+            <iframe src="path/to/your_resume.pdf" width="100%" height="100%" style="border: none;"></iframe>
+          </div>
+
+          <p>Or, download the PDF here: <a href="Niranjan_Sujay.pdf" target="_blank">Download Resume</a></p>
         </section>
-    </main>
+      </main>
+    </div>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="inner">
-            <p>&copy; 2025 Niranjan Sujay. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
+    <div class="circle"></div>
+
+    <script>
+      const circle = document.querySelector('.circle');
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let speed = 0.1;
+
+      document.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+      });
+
+      function updateCirclePosition() {
+        currentX += (targetX - currentX) * speed;
+        currentY += (targetY - currentY) * speed;
+
+        circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
+        circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
+
+        requestAnimationFrame(updateCirclePosition);
+      }
+
+      updateCirclePosition();
+    </script>
+  </body>
 </html>
