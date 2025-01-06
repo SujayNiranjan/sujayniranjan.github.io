@@ -63,34 +63,6 @@
             This experience not only allows me to contribute to the community but also reinforces my commitment to inspiring the next generation of innovators.
           </p>
         </section>
-
-     <section>
-          <h2>Education</h2>
-          <ul>
-            <li><strong>M.S., Mechatronics and Robotics</strong> – New York University <em>(May 2024)</em></li>
-            <li><strong>B.Tech., Robotics and Automation</strong> – Jain University <em>(May 2022)</em></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Research Interests</h2>
-          <ul>
-            <li>3D Mapping</li>
-            <li>Visual SLAM</li>
-            <li>Sensor Fusion</li>
-            <li>Machine Learning</li>
-            <li>Point Cloud Processing</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Technical Skills</h2>
-          <ul>
-            <li>Python, C, ROS, MATLAB</li>
-            <li>Machine Learning</li>
-          </ul>
-        </section>
-
         <section>
           <h2>Talks & Lectures</h2>
           <ul>
@@ -109,5 +81,32 @@
       </p>
       </main>
     </div>
+      <div class="circle"></div>
+
+  <script>
+    const circle = document.querySelector('.circle');
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+    let speed = 0.1;
+
+    document.addEventListener('mousemove', (e) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+    });
+
+    function updateCirclePosition() {
+      currentX += (targetX - currentX) * speed;
+      currentY += (targetY - currentY) * speed;
+
+      circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
+      circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
+
+      requestAnimationFrame(updateCirclePosition);
+    }
+
+    updateCirclePosition();
+  </script>
   </body>
 </html>
