@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks & Publications</title>
+    <link rel="stylesheet" href="stylesheets/styles.css"> <!-- Include your CSS file here -->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Niranjan Sujay</h1>
+        <img src="Images/new.jpg" alt="Niranjan Sujay" style="width: 200px; height: auto; margin-top: 30px; object-fit: cover; object-position: top;">
+        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/niranjan-sujay/" target="_blank">LinkedIn</a> |
+          <a href="mailto:ns5428@nyu.edu" target="_blank">Email</a> |
+          <a href="https://github.com/SujayNiranjan" target="_blank">GitHub</a> |
+          <a href="https://www.researchgate.net/profile/Niranjan-Sujay" target="_blank">ResearchGate</a>
+        </div>
+        <footer>
+          <p>This project is maintained by <a href="https://github.com/SujayNiranjan">Niranjan Sujay</a></p>
+        </footer>
+      </header>
+      <nav style="text-align: right; margin-top: 30px;">
+        <ul style="list-style-type: none; display: inline-block;">
+          <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="projects.html">Projects</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="experiences.html">Experience</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="publications.html">Publications</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="contact.html">Contact</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
+      <main>
+        <section>
+          <h2>Talks</h2>
+          <ul>
+            <!-- Add your talks here -->
+            <li><strong>Artificial Intelligence: The New Science of an Old Question</strong> – GSP Seminar, Fall 2021</li>
+            <!-- Example: <li><strong>Title of Talk</strong> – Event Name, Date</li> -->
+          </ul>
+        </section>
+
+        <section>
+          <h2>Publications</h2>
+          <ul>
+            <!-- Add your publications here -->
+            <li><strong>Robust Robotic Perception for Autonomous Navigation in Complex Environments</strong> – Journal of Robotics, 2024</li>
+            <li><strong>3D Mapping and Object Detection for Autonomous Vehicles</strong> – Robotics and AI Conference, 2023</li>
+            <!-- Example: <li><strong>Title of Publication</strong> – Journal Name, Year</li> -->
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <div class="circle"></div>
+
+    <script>
+      const circle = document.querySelector('.circle');
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let speed = 0.1;
+
+      document.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+      });
+
+      function updateCirclePosition() {
+        currentX += (targetX - currentX) * speed;
+        currentY += (targetY - currentY) * speed;
+
+        circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
+        circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
+
+        requestAnimationFrame(updateCirclePosition);
+      }
+
+      updateCirclePosition();
+    </script>
+  </body>
+</html>
