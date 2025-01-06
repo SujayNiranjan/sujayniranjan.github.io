@@ -12,81 +12,81 @@
   <div class="wrapper">
     <header>
       <h1>Niranjan Sujay</h1>
-      <img src="Images/new.jpg" alt="Niranjan Sujay" style="width: 200px; height: auto; margin-top: 30px;">
+      <img src="Images/new.jpg" alt="Niranjan Sujay" style="width: 200px; height: auto; margin-top: 30px; object-fit: cover; object-position: top;">
       <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
-      <p class="view">
-        <a href="https://github.com/SujayNiranjan?tab=projects">View the Project on GitHub <small>Your GitHub Username</small></a>
-      </p>
-    </header>
- <nav style="text-align: right; margin-top: 30px;">
-        <ul style="list-style-type: none; display: inline-block;">
-          <li style="display: inline-block; margin: 0 20px;"><a href="about.html">About Me</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="projects.html">Projects</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="experinces.html">Experience</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="publications.html">Talks & Publications</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="skills.html">Skills</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="resume.html">Resume</a></li>
-      </nav>
-    <section>
-      <h1>Welcome to My Portfolio</h1>
-      <p><em>View the <a href="https://github.com/SujayNiranjan/NSujay">source of this content</a>.</em></p>
-      <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
-      <h2>Explore My Projects</h2>
-      <p>Click on the project names below to explore more details:</p>
-      <ul>
-        <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
-        <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
-        <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
-        <li><a href="projects/curb2door/index.html">Curb2Door</a></li>
-        <li><a href="projects/diffusion-models/index.html">Diffusion Models</a></li>
-        <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
-      </ul>
-    </section>
-    <footer>
-      <p>This project is maintained by <a href="https://github.com/SujayNiranjan">Niranjan Sujay</a></p>
       <div class="socials">
         <a href="https://www.linkedin.com/in/niranjan-sujay/" target="_blank">LinkedIn</a> |
         <a href="mailto:ns5428@nyu.edu" target="_blank">Email</a> |
         <a href="https://github.com/SujayNiranjan" target="_blank">GitHub</a> |
         <a href="https://www.researchgate.net/profile/Niranjan-Sujay" target="_blank">ResearchGate</a>
       </div>
-    </footer>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/SujayNiranjan">Niranjan Sujay</a></p>
+      </footer>
+    </header>
+    
+    <!-- Navigation Bar -->
+    <nav style="text-align: right; margin-top: 30px;">
+      <ul style="list-style-type: none; display: inline-block;">
+        <li style="display: inline-block; margin: 0 20px;"><a href="about.html">About Me</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="projects.html">Projects</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="experiences.html">Experience</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="publications.html">Talks & Publications</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="skills.html">Skills</a></li>
+        <li style="display: inline-block; margin: 0 20px;"><a href="resume.html">Resume</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <!-- Welcome Section -->
+      <section>
+        <h1>Welcome to My Portfolio</h1>
+        <p><em>View the <a href="https://github.com/SujayNiranjan/NSujay">source of this content</a>.</em></p>
+        <p>My research focuses on advancing robotic perception, mapping, and autonomy, with a special interest in sensor fusion, state estimation, and localization for robotic systems. I am currently working on multiple projects that integrate cutting-edge techniques in AI and machine learning to push the boundaries of autonomous systems.</p>
+      </section>
+
+      <!-- Projects Section -->
+      <section>
+        <h2>Explore My Projects</h2>
+        <p>Click on the project names below to explore more details:</p>
+        <ul>
+          <li><a href="projects/urbannav/index.html">UrbanNav</a></li>
+          <li><a href="projects/swimmerbot/index.html">SwimmerBot</a></li>
+          <li><a href="projects/mappingnyc/index.html">MappingNYC</a></li>
+          <li><a href="projects/curb2door/index.html">Curb2Door</a></li>
+          <li><a href="projects/diffusion-models/index.html">Diffusion Models</a></li>
+          <li><a href="projects/biped-robot/index.html">Biped Robot</a></li>
+        </ul>
+      </section>
+    </main>
   </div>
 
-  <!-- Circle element -->
+  <!-- Circle Element -->
   <div class="circle"></div>
 
   <script>
     const circle = document.querySelector('.circle');
-
-    // Variables for the delay effect
     let targetX = 0;
     let targetY = 0;
     let currentX = 0;
     let currentY = 0;
-    let speed = 0.1;  // Speed of the circle's delay (adjust this value for more/less delay)
+    let speed = 0.1;
 
-    // Update the target position on mousemove
     document.addEventListener('mousemove', (e) => {
-        targetX = e.clientX;
-        targetY = e.clientY;
+      targetX = e.clientX;
+      targetY = e.clientY;
     });
 
-    // Function to update the circle's position with a delay
     function updateCirclePosition() {
-        // Calculate the difference between current and target positions
-        currentX += (targetX - currentX) * speed;
-        currentY += (targetY - currentY) * speed;
+      currentX += (targetX - currentX) * speed;
+      currentY += (targetY - currentY) * speed;
 
-        // Apply the new position to the circle
-        circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
-        circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
+      circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
+      circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
 
-        // Call the update function on the next animation frame
-        requestAnimationFrame(updateCirclePosition);
+      requestAnimationFrame(updateCirclePosition);
     }
 
-    // Start the animation loop
     updateCirclePosition();
   </script>
 </body>
