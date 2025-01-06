@@ -59,5 +59,32 @@
       </div>
     </footer>
   </div>
+    <div class="circle"></div>
+
+    <script>
+      const circle = document.querySelector('.circle');
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let speed = 0.1;
+
+      document.addEventListener('mousemove', (e) => {
+        targetX = e.clientX;
+        targetY = e.clientY;
+      });
+
+      function updateCirclePosition() {
+        currentX += (targetX - currentX) * speed;
+        currentY += (targetY - currentY) * speed;
+
+        circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
+        circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
+
+        requestAnimationFrame(updateCirclePosition);
+      }
+
+      updateCirclePosition();
+    </script>
 </body>
 </html>
