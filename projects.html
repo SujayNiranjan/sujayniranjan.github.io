@@ -7,11 +7,30 @@
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <meta name="viewport" content="width=device-width">
+    <style>
+      /* Basic styling for filter menu */
+      .filter-menu {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .filter-menu select {
+        padding: 8px 12px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      /* Styling for list items - default */
+      #projectList li {
+        display: list-item;
+        margin: 10px 0;
+      }
+    </style>
   </head>
   <body>
     <div class="wrapper">
       <!-- Horizontal Navigation Bar -->
- <nav style="text-align: right; margin-top: 30px;">
+      <nav style="text-align: right; margin-top: 30px;">
         <ul style="list-style-type: none; display: inline-block;">
           <li style="display: inline-block; margin: 0 20px;"><a href="index.html">Home</a></li>
           <li style="display: inline-block; margin: 0 20px;"><a href="about.html">About Me</a></li>
@@ -19,32 +38,45 @@
           <li style="display: inline-block; margin: 0 20px;"><a href="publications.html">Publications</a></li>
           <li style="display: inline-block; margin: 0 20px;"><a href="skills.html">Skills</a></li>
           <li style="display: inline-block; margin: 0 20px;"><a href="resume.html">Resume</a></li>
+        </ul>
       </nav>
       
       <section>
         <h2>Project Overview</h2>
         <p>Below are the projects I am currently working on. Click on the project names to explore more details:</p>
+        
+        <!-- Sort Dropdown -->
+        <div class="filter-menu">
+          <label for="sortProjects">Sort by: </label>
+          <select id="sortProjects" onchange="sortProjects()">
+            <option value="all">All</option>
+            <option value="robotics">Robotics</option>
+            <option value="cs">Computer Science</option>
+            <option value="mechanical">Mechanical</option>
+            <option value="electrical">Electrical</option>
+          </select>
+        </div>
 
-        <ul>
-          <li><a href="projects/urbannav/index.html">UrbanNav</a> - A cutting-edge autonomous navigation system using a Unitree Go1 robot dog.</li>
-          <li><a href="projects/swimmerbot/index.html">SwimmerBot</a> - A robotic swimmer tracker designed for athletic training and video documentation.</li>
-          <li><a href="projects/mappingnyc/index.html">MappingNYC</a> - An advanced urban mapping project utilizing LiDAR and GPS systems.</li>
-          <li><a href="projects/curb2door/index.html">Curb2Door</a> - A project focusing on reconstructing environments for efficient localization using LiDAR, camera, and GPS data.</li>
-          <li><a href="projects/diffusion-models/index.html">Diffusion Models</a> - Research on utilizing diffusion models for motion prediction and forecasting in robotic systems.</li>
-          <li><a href="projects/biped-robot/index.html">Biped Robot</a> - Development of a biped robot focusing on dynamic stability and walking algorithms.</li>
-          <li><a href="projects/Visual Odometry/index.html">Visual Odometry using RGB-D Camera</a> - Real-time camera motion estimation algorithm using RGB-D data and feature detection.</li>
-          <li><a href="projects/vae-digit-generation/index.html">Variational Autoencoder for Digit Generation</a> - Implemented a VAE to generate digit images from MNIST data.</li>
-          <li><a href="projects/optimization-study/index.html">Comparative Study on Optimization Techniques</a> - Analysis of optimization methods with Adam and SGD.</li>
-          <li><a href="projects/yolo-drone/index.html">YOLO-based Drone Detection System</a> - Drone detection using YOLO for real-time surveillance.</li>
-          <li><a href="projects/statistical-analysis/index.html">Statistical Analysis of Glove Size Distribution</a> - Conducted statistical studies using Python's libraries.</li>
-          <li><a href="projects/slam-maze/index.html">SLAM for Maze Navigation</a> - Project using Pose Graph Mapping and feature extraction for autonomous navigation in mazes.</li>
-          <li><a href="projects/sensor-fusion-aerial/index.html">Sensor Fusion and State Estimation for Aerial Robot</a> - State estimation using EKF and UKF for aerial robots.</li>
-          <li><a href="projects/animetronic-hand/index.html">Animetronic Hand</a> - Gesture-controlled animetronic hand using computer vision.</li>
-          <li><a href="projects/autonomous-systems/index.html">Autonomous Robotic Systems</a> - Multiple sub-projects including AutoInventoryBot and AutoParkBot focused on autonomous navigation and inventory management.</li>
-          <li><a href="projects/trajectory-planning/index.html">Trajectory Planning and Inverse Dynamic Control of Manipulator</a> - Built and simulated trajectory control for UR5 manipulator.</li>
-          <li><a href="projects/birotor-tracker/index.html">Bi-Rotor Trajectory Tracker</a> - Python-based controller for bi-rotors with trajectory tracking.</li>
-          <li><a href="projects/robotic-arm/index.html">Robotic Arm</a> - Basic robotic manipulator for pick and place operations.</li>
-          <li><a href="projects/electric-car/index.html">Electric Car</a> - Built a 2-seater electric car with hub motors and BLDC controllers.</li>
+        <ul id="projectList">
+          <li class="robotics"><a href="projects/urbannav/index.html">UrbanNav</a> - A cutting-edge autonomous navigation system using a Unitree Go1 robot dog.</li>
+          <li class="robotics"><a href="projects/swimmerbot/index.html">SwimmerBot</a> - A robotic swimmer tracker designed for athletic training and video documentation.</li>
+          <li class="robotics"><a href="projects/mappingnyc/index.html">MappingNYC</a> - An advanced urban mapping project utilizing LiDAR and GPS systems.</li>
+          <li class="robotics"><a href="projects/curb2door/index.html">Curb2Door</a> - A project focusing on reconstructing environments for efficient localization using LiDAR, camera, and GPS data.</li>
+          <li class="robotics"><a href="projects/diffusion-models/index.html">Diffusion Models</a> - Research on utilizing diffusion models for motion prediction and forecasting in robotic systems.</li>
+          <li class="mechanical"><a href="projects/biped-robot/index.html">Biped Robot</a> - Development of a biped robot focusing on dynamic stability and walking algorithms.</li>
+          <li class="robotics"><a href="projects/Visual Odometry/index.html">Visual Odometry using RGB-D Camera</a> - Real-time camera motion estimation algorithm using RGB-D data and feature detection.</li>
+          <li class="cs"><a href="projects/vae-digit-generation/index.html">Variational Autoencoder for Digit Generation</a> - Implemented a VAE to generate digit images from MNIST data.</li>
+          <li class="cs"><a href="projects/optimization-study/index.html">Comparative Study on Optimization Techniques</a> - Analysis of optimization methods with Adam and SGD.</li>
+          <li class="robotics"><a href="projects/yolo-drone/index.html">YOLO-based Drone Detection System</a> - Drone detection using YOLO for real-time surveillance.</li>
+          <li class="cs"><a href="projects/statistical-analysis/index.html">Statistical Analysis of Glove Size Distribution</a> - Conducted statistical studies using Python's libraries.</li>
+          <li class="robotics"><a href="projects/slam-maze/index.html">SLAM for Maze Navigation</a> - Project using Pose Graph Mapping and feature extraction for autonomous navigation in mazes.</li>
+          <li class="robotics"><a href="projects/sensor-fusion-aerial/index.html">Sensor Fusion and State Estimation for Aerial Robot</a> - State estimation using EKF and UKF for aerial robots.</li>
+          <li class="cs"><a href="projects/animetronic-hand/index.html">Animetronic Hand</a> - Gesture-controlled animetronic hand using computer vision.</li>
+          <li class="robotics"><a href="projects/autonomous-systems/index.html">Autonomous Robotic Systems</a> - Multiple sub-projects including AutoInventoryBot and AutoParkBot focused on autonomous navigation and inventory management.</li>
+          <li class="robotics"><a href="projects/trajectory-planning/index.html">Trajectory Planning and Inverse Dynamic Control of Manipulator</a> - Built and simulated trajectory control for UR5 manipulator.</li>
+          <li class="robotics"><a href="projects/birotor-tracker/index.html">Bi-Rotor Trajectory Tracker</a> - Python-based controller for bi-rotors with trajectory tracking.</li>
+          <li class="robotics"><a href="projects/robotic-arm/index.html">Robotic Arm</a> - Basic robotic manipulator for pick and place operations.</li>
+          <li class="electrical"><a href="projects/electric-car/index.html">Electric Car</a> - Built a 2-seater electric car with hub motors and BLDC controllers.</li>
         </ul>
       </section>
       
@@ -52,33 +84,24 @@
         <p>This project is maintained by <a href="https://github.com/YourGitHubUsername">Niranjan Sujay</a></p>
       </footer>
     </div>
-       </div>
-      <div class="circle"></div>
 
-  <script>
-    const circle = document.querySelector('.circle');
-    let targetX = 0;
-    let targetY = 0;
-    let currentX = 0;
-    let currentY = 0;
-    let speed = 0.1;
+    <script>
+      function sortProjects() {
+        const filter = document.getElementById('sortProjects').value;
+        const listItems = document.querySelectorAll('#projectList li');
 
-    document.addEventListener('mousemove', (e) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
-    });
-
-    function updateCirclePosition() {
-      currentX += (targetX - currentX) * speed;
-      currentY += (targetY - currentY) * speed;
-
-      circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
-      circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
-
-      requestAnimationFrame(updateCirclePosition);
-    }
-
-    updateCirclePosition();
-  </script>
+        listItems.forEach(item => {
+          if (filter === 'all') {
+            item.style.display = 'list-item';
+          } else {
+            if (item.classList.contains(filter)) {
+              item.style.display = 'list-item';
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      }
+    </script>
   </body>
 </html>
