@@ -3,94 +3,64 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbanNav - Project</title>
-    <link rel="stylesheets" href="styles.css"> <!-- Include your CSS file here -->
+    <title>UrbanNav - Niranjan Sujay</title>
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
   </head>
   <body>
     <div class="wrapper">
-      <!-- Header Section -->
       <header>
-        <h1>UrbanNav</h1>
-        <img src="../Images/urbannav.jpg" alt="UrbanNav Project" style="width: 200px; height: auto; margin-top: 30px; object-fit: cover; object-position: top;">
-        <p>An autonomous navigation system designed for urban environments, utilizing advanced mapping and localization techniques for improved autonomous vehicle performance.</p>
+        <h1>Niranjan Sujay</h1>
+        <img src="../../Images/new.jpg" alt="Niranjan Sujay" style="width: 200px; height: auto; margin-top: 30px; object-fit: cover; object-position: top;">
+        <p>Roboticist - Advancing robotic perception and mapping for the future of autonomous systems.</p>
         <div class="socials">
-          <a href="https://github.com/SujayNiranjan/UrbanNav" target="_blank">GitHub</a> |
+          <a href="https://www.linkedin.com/in/niranjan-sujay/" target="_blank">LinkedIn</a> |
+          <a href="mailto:ns5428@nyu.edu" target="_blank">Email</a> |
+          <a href="https://github.com/SujayNiranjan" target="_blank">GitHub</a> |
           <a href="https://www.researchgate.net/profile/Niranjan-Sujay" target="_blank">ResearchGate</a>
         </div>
-        <footer>
-          <p>This project is maintained by <a href="https://github.com/SujayNiranjan">Niranjan Sujay</a></p>
-        </footer>
       </header>
-
-      <!-- Navigation Bar -->
       <nav style="text-align: right; margin-top: 30px;">
         <ul style="list-style-type: none; display: inline-block;">
-          <li style="display: inline-block; margin: 0 20px;"><a href="../index.html">Home</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="../about.html">About Me</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="../projects.html">Projects</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="../experiences.html">Experience</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="../publications.html">Publications</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="../skills.html">Skills</a></li>
-          <li style="display: inline-block; margin: 0 20px;"><a href="../resume.html">Resume</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="../../index.html">Home</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="../../projects.html">Projects</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="../../experiences.html">Experience</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="../../publications.html">Publications</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="../../skills.html">Skills</a></li>
+          <li style="display: inline-block; margin: 0 20px;"><a href="../../resume.html">Resume</a></li>
         </ul>
       </nav>
-
-      <!-- Project Content Section -->
       <main>
         <section>
-          <h2>Project Overview</h2>
-          <p>UrbanNav is an autonomous navigation system developed to enable vehicles to navigate complex urban environments. It integrates mapping, localization, and decision-making algorithms for effective navigation.</p>
+          <h2>UrbanNav: Autonomous Navigation Using a Unitree Go1 Robot Dog</h2>
+          <p>UrbanNav is a research project aimed at improving autonomous navigation using a Unitree Go1 robot dog. The robot is equipped with various sensors like LiDAR, cameras, and GPS to perform precise navigation tasks in urban environments.</p>
         </section>
 
         <section>
           <h2>Key Features</h2>
           <ul>
-            <li>Real-time 3D mapping of the environment</li>
-            <li>Advanced localization using GPS and visual odometry</li>
-            <li>Integration of multiple sensors (LiDAR, cameras, radar)</li>
-            <li>Autonomous decision-making algorithms for safe navigation</li>
+            <li>Autonomous navigation in urban settings.</li>
+            <li>Integration of LiDAR, cameras, and GPS sensors.</li>
+            <li>Real-time mapping and path planning.</li>
           </ul>
         </section>
 
         <section>
-          <h2>Challenges Overcome</h2>
-          <p>Handling dynamic urban environments and ensuring robust performance despite obstacles like pedestrians and vehicles was a challenge. This was mitigated using advanced sensor fusion techniques.</p>
+          <h2>Technologies Used</h2>
+          <ul>
+            <li>ROS</li>
+            <li>SLAM Algorithms</li>
+            <li>Computer Vision</li>
+          </ul>
         </section>
 
         <section>
-          <h2>Future Directions</h2>
-          <p>Plans include integrating machine learning models for more intelligent decision-making and extending the system to multi-vehicle coordination.</p>
+          <h2>Learn More</h2>
+          <p><a href="https://github.com/SujayNiranjan/UrbanNav" target="_blank">View the project on GitHub</a></p>
         </section>
       </main>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/SujayNiranjan">Niranjan Sujay</a></p>
+      </footer>
     </div>
-
-    <!-- Circle Animation -->
-    <div class="circle"></div>
-
-    <script>
-      const circle = document.querySelector('.circle');
-      let targetX = 0;
-      let targetY = 0;
-      let currentX = 0;
-      let currentY = 0;
-      let speed = 0.1;
-
-      document.addEventListener('mousemove', (e) => {
-        targetX = e.clientX;
-        targetY = e.clientY;
-      });
-
-      function updateCirclePosition() {
-        currentX += (targetX - currentX) * speed;
-        currentY += (targetY - currentY) * speed;
-
-        circle.style.left = `${currentX - circle.offsetWidth / 2}px`;
-        circle.style.top = `${currentY - circle.offsetHeight / 2}px`;
-
-        requestAnimationFrame(updateCirclePosition);
-      }
-
-      updateCirclePosition();
-    </script>
   </body>
 </html>
