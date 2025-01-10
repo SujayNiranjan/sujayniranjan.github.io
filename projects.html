@@ -4,18 +4,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Projects - Niranjan Sujay</title>
-          <!-- Sort Dropdown -->
-      <div class="filter-menu">
-        <label for="sortProjects">Sort by: </label>
-        <select id="sortProjects" onchange="sortProjects()">
-          <option value="all">All</option>
-          <option value="robotics">Robotics</option>
-          <option value="cs">Computer Science</option>
-          <option value="mechanical">Mechanical</option>
-          <option value="electrical">Electrical</option>
-        </select>
-      </div>
-    
     <link rel="stylesheet" href="stylesheets/styles.css">
     <meta name="viewport" content="width=device-width">
     <style>
@@ -31,13 +19,24 @@
         border: 1px solid #ccc;
       }
 
-      /* Styling for list items - default */
       #projectList li {
         display: list-item;
         margin: 10px 0;
       }
     </style>
   </head>
+            <!-- Sort Dropdown -->
+      <div class="filter-menu">
+        <label for="sortProjects">Sort by: </label>
+        <select id="sortProjects" onchange="sortProjects()">
+          <option value="all">All</option>
+          <option value="robotics">Robotics</option>
+          <option value="cs">Computer Science</option>
+          <option value="mechanical">Mechanical</option>
+          <option value="electrical">Electrical</option>
+        </select>
+      </div>
+  
   <body>
     <div class="wrapper">
       <!-- Horizontal Navigation Bar -->
@@ -56,7 +55,6 @@
         <h2>Project Overview</h2>
         <p>Below are the projects I am currently working on. Click on the project names to explore more details:</p>
         
-
         <ul id="projectList">
           <li class="robotics"><a href="projects/urbannav/index.html">UrbanNav</a> - A cutting-edge autonomous navigation system using a Unitree Go1 robot dog.</li>
           <li class="robotics"><a href="projects/swimmerbot/index.html">SwimmerBot</a> - A robotic swimmer tracker designed for athletic training and video documentation.</li>
